@@ -1,9 +1,209 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'global';
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
+.header {
+    padding: 45px 0;
+}
 
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend %rubik-500;
+}
 
-@import 'media';
+.logo {
+    outline-color: transparent;
+    transform: scale(1);
+    border: 1px solid transparent;
+    transition: outline-color 0.3s, transform 0.3s, border-color 0.3s;
+
+    &__img {
+        object-fit: contain;
+        max-height: 40px;
+        max-width: 150px;
+    }
+
+    &:focus {
+        outline-offset: 2px;
+        outline-color: $default;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        border-color: rgb(168, 166, 166);
+    }
+}
+
+.menu {
+    display: flex;
+
+    &__item:not(:last-child) {
+        margin-right: 35px;
+    }
+
+    &__link {
+        padding: 10px 0;
+    }
+}
+
+.link-effect {
+    border-bottom: 1px solid transparent;
+    outline-color: transparent;
+    transition: border-bottom 0.3s, outline-color 0.3s, color 0.3s;
+
+    &:focus {
+        outline-offset: 2px;
+        outline-color: $default;
+    }
+
+    &:hover {
+        border-color: $default;
+    }
+
+    &:active {
+        color: rgba($default, 0.6);
+    }
+}
+
+.user-nav {
+    display: flex;
+}
+
+.circle-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-color: #edf1f4;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: center center;
+    outline-color: transparent;
+    transition: outline-color 0.3s, background-color 0.3s, border-color 0.3s;
+
+    &:focus {
+        outline-offset: 2px;
+        outline-color: $default;
+    }
+
+    &:hover {
+        background-color: rgba($card-title, 0.8);
+    }
+
+    &:active {
+        border-color: #414141;
+    }
+}
+
+.user-nav__item--search {
+    background-image: url("../images/header/search.png");
+    margin-right: 20px;
+
+    &:hover {
+        background-color: rgba($card-title, 0.2);
+    }
+}
+
+.user-nav__item--dots {
+    background-color: #a3bbc8;
+    background-image: url("../images/header/dots.png");
+}
+
+.user-nav__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.user-nav__link {
+    height: 50px;
+    width: 90px;
+    background-color: $card-bg;
+    background-repeat: no-repeat;
+    outline-color: transparent;
+    border: 1px solid transparent;
+    background-size: 16px;
+    background-position: center center;
+    position: relative;
+    transition: background-color 0.3s, outline-color 0.3s, border-color 0.3s;
+    @extend %dmsans-400;
+
+    &:first-child {
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
+
+    &:last-child {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+
+    &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        display: block;
+        background-color: #fde7d3;
+        right: 0;
+        top: 10px;
+        width: 1px;
+        height: 32px;
+    }
+
+    &:focus {
+        outline-offset: 2px;
+        outline-color: $default;
+    }
+
+    &:hover {
+        background-color: #fde7d3;
+    }
+
+    &:active {
+        border-color: #414141;
+    }
+}
+
+.user-nav__link--heart {
+    background-image: url("../images/header/heart.png");
+}
+
+.user-nav__link--cart {
+    background-image: url("../images/header/cart.png");
+}
+
+.user-nav__num {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 0px;
+    left: calc(50% + 3px);
+    text-align: center;
+    line-height: 16px;
+    font-size: 10px;
+    color: $card-title;
+}
+
+@import "media";

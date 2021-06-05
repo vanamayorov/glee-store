@@ -1,14 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body>
-    
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <nav class="nav">
+            <a class="logo" href="#">
+              <img class="logo__img" src="images/logo.png" alt="Site logo">
+            </a>
+            <ul class="menu">
+              <li class="menu__item">
+                <a class="menu__link link-effect" href="#">Home +</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link link-effect" href="#">About</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link link-effect" href="#">Services</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link link-effect" href="#">Pages +</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link link-effect" href="#">News</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link link-effect" href="#">Contact</a>
+              </li>
+            </ul>
+            <div class="user-nav">
+              <button class="user-nav__btn user-nav__item--search circle-btn" type="button">
+                <span class="sr-only">Search what you are interested in on this website</span>
+              </button>
+              <div class="user-nav__links">
+                <a class="user-nav__link user-nav__link--heart" href="#">
+                  <span class="sr-only">Check liked products</span>
+                  <span class="user-nav__num">0</span>
+                </a>
+                <a class="user-nav__link user-nav__link--cart" href="#">
+                  <span class="sr-only">Check shopping cart</span>
+                  <span class="user-nav__num">0</span>
+                </a>
+              </div>
+              <button class="user-nav__btn user-nav__item--dots circle-btn" type="button">
+                <span class="sr-only">Open menu</span>
+              </button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
     <script src="js/main.min.js"></script>
-</body>
+  </body>
+
 </html>

@@ -7,7 +7,7 @@ const imagemin = require("imagemin");
 const del = require("del");
 const browserSync = require("browser-sync").create();
 
-function browserSync() {
+function browserRefresh() {
   browserSync.init({
     server: {
       baseDir: "app/",
@@ -68,11 +68,11 @@ function watching() {
 
 exports.styles = styles;
 exports.scripts = scripts;
-exports.browserSync = scripts;
+exports.browserRefresh = scripts;
 exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 
 
-exports.default = parallel(styles, scripts, watching, browserSync);
+exports.default = parallel(styles, scripts, watching, browserRefresh);
