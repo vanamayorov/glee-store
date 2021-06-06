@@ -10,6 +10,8 @@ body {
     line-height: 1.8;
     color: $default;
     background-color: #fff;
+
+    @extend %dmsans-400;
 }
 
 .main {
