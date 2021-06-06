@@ -5,6 +5,7 @@ const autoprefixer = require("gulp-autoprefixer");
 const uglify = require("gulp-uglify");
 const imagemin = require("imagemin");
 const del = require("del");
+const gulpStylelint = require("gulp-stylelint");
 const browserSync = require("browser-sync").create();
 
 function browserRefresh() {
@@ -17,7 +18,17 @@ function browserRefresh() {
 }
 
 function styles() {
-  return src("app/scss/style.scss")
+  return src("app/scss/*.scss")
+    .pipe(
+      gulpStylelint({
+        reporters: [
+          {
+            formatter: "string",
+            console: true,
+          },
+        ],
+      })
+    )
     .pipe(scss({ outputStyle: "expanded" }))
     .pipe(concat("style.min.css"))
     .pipe(
@@ -73,6 +84,5 @@ exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
-
 
 exports.default = parallel(styles, scripts, watching, browserRefresh);
