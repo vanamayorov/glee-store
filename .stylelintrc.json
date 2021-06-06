@@ -6,6 +6,7 @@
         "ignoreAtRules": ["include", "mixin", "extend"]
         }],
         "no-empty-source": null,
-        "no-invalid-position-at-import-rule": null
+        "no-invalid-position-at-import-rule": null,
+        "no-missing-end-of-source-newline": null
     }
 }

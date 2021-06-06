@@ -47,6 +47,7 @@ textarea,
 select {
     font: inherit;
     letter-spacing: inherit;
+    cursor: pointer;
 }
 
 a {
@@ -54,10 +55,6 @@ a {
     text-decoration: none;
 }
 
-button {
-    cursor: pointer;
-}
-
 address {
-    font-weight: normal;
+    font-style: normal;
 }
