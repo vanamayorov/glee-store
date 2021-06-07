@@ -241,6 +241,7 @@
 
     &__wrapper {
         display: flex;
+        align-items: flex-end;
         justify-content: space-between;
         margin-bottom: 200px;
     }
@@ -421,19 +422,48 @@
     }
 
     &__items {
-        display: grid;
-        grid-template-rows: 380px 380px 380px 380px;
-        grid-template-columns: 270px 270px 270px 270px;
-        grid-gap: 30px;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        margin: 0 auto;
+    }
+
+    &__box {
+        position: absolute;
+        right: 0;
+        bottom: 150px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        opacity: 0;
+        transition: opacity 0.3s;
     }
 
     &__item {
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: calc(25% - 30px);
+        min-height: 380px;
+        padding: 40px 20px 35px 20px;
+        margin-bottom: 30px;
+        text-align: center;
+        cursor: pointer;
         background-color: #fff;
         border-radius: 10px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+        &:not(:nth-child(4n)) {
+            margin-right: 30px;
+        }
+
+        &:hover .products-week__box {
+            opacity: 1;
+        }
+
+        @extend %dmsans-700;
     }
 
     &__btn {
@@ -444,43 +474,31 @@
         }
 
         &:not(:last-child) {
-            margin-right: 18px;
+            margin-right: 15px;
         }
 
         &--search {
             background-image: url('../images/icons/search.svg');
+
+            &:hover {
+                background-image: url('../images/icons/search-white.svg');
+            }
         }
 
         &--cart {
             background-image: url('../images/icons/cart.svg');
+
+            &:hover {
+                background-image: url('../images/icons/cart-white.svg');
+            }
         }
 
         &--like {
             background-image: url('../images/icons/like.svg');
-        }
-    }
 
-    &__group {
-        position: absolute;
-        top: 180px;
-        right: 35px;
-        display: none;
-    }
-
-    &__card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        height: 100%;
-        padding: 40px 20px 35px 20px;
-        text-align: center;
-
-        @extend %dmsans-700;
-
-        &:hover + .products-week__group {
-            z-index: 3;
-            display: flex;
+            &:hover {
+                background-image: url('../images/icons/like-white.svg');
+            }
         }
     }
 

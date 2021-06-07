@@ -18,18 +18,7 @@ function browserRefresh() {
 }
 
 function styles() {
-  return src("app/scss/*.scss")
-    .pipe(
-      gulpStylelint({
-        reporters: [
-          {
-            failAfterError: false,
-            formatter: "string",
-            console: true,
-          },
-        ],
-      })
-    )
+  return src("app/scss/style.scss")
     .pipe(scss({ outputStyle: "expanded" }))
     .pipe(concat("style.min.css"))
     .pipe(
@@ -37,6 +26,20 @@ function styles() {
     )
     .pipe(dest("app/css"))
     .pipe(browserSync.stream());
+}
+
+function lintCss() {
+  return src("app/scss/*.scss").pipe(
+    gulpStylelint({
+      reporters: [
+        {
+          failAfterError: false,
+          formatter: "string",
+          console: true,
+        },
+      ],
+    })
+  );
 }
 
 function scripts() {
@@ -89,6 +92,7 @@ exports.browserRefresh = scripts;
 exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
+exports.lintCss = lintCss;
 exports.build = series(cleanDist, images, build);
 
 exports.default = parallel(styles, scripts, watching, browserRefresh);
