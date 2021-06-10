@@ -6,6 +6,8 @@ const uglify = require("gulp-uglify");
 const imagemin = require("imagemin");
 const del = require("del");
 const gulpStylelint = require("gulp-stylelint");
+const svgSprite = require("gulp-svg-sprite");
+const fileinclude = require("gulp-file-include");
 const browserSync = require("browser-sync").create();
 
 function browserRefresh() {
@@ -15,6 +17,31 @@ function browserRefresh() {
     },
     notify: false,
   });
+}
+
+function includeFile() {
+  return src("app/html/*.html")
+    .pipe(
+      fileinclude({
+        prefix: "@@",
+        basepath: "@file",
+      })
+    )
+    .pipe(dest("app/"));
+}
+
+function spriteSvg() {
+  return src("./app/images/icons/**.svg")
+    .pipe(
+      svgSprite({
+        mode: {
+          stack: {
+            sprite: "../sprite.svg",
+          },
+        },
+      })
+    )
+    .pipe(dest("app/images/"));
 }
 
 function styles() {
@@ -84,6 +111,8 @@ function watching() {
   watch(["app/scss/**/*.scss"], styles);
   watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
   watch(["app/**/*.html"]).on("change", browserSync.reload);
+  watch(["app/images/sprites/**.svg"], spriteSvg);
+  watch(["app/html/**/*.html"], includeFile);
 }
 
 exports.styles = styles;
@@ -93,6 +122,14 @@ exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.lintCss = lintCss;
+exports.includeFile = includeFile;
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(styles, scripts, watching, browserRefresh);
+exports.default = parallel(
+  styles,
+  scripts,
+  watching,
+  spriteSvg,
+  browserRefresh,
+  includeFile
+);
