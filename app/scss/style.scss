@@ -622,6 +622,152 @@
     }
 }
 
+.new-design {
+    padding: 70px 0 120px;
+
+    .container {
+        padding: 0;
+    }
+
+    .title {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .mix-filter {
+        margin: 0 auto 80px;
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__item {
+        max-width: 370px;
+        margin: 0 15px 30px;
+        font-family: "DMSans", sans-serif;
+        font-weight: 700;
+    }
+}
+
+.design-card {
+    &__link {
+        display: block;
+        height: 246px;
+        padding: 35px 0 30px 35px;
+        background-color: $grey20;
+        border-radius: 5px 5px 0 0;
+        outline: transparent;
+        transition: box-shadow 0.3s, transform 0.3s;
+        transform: scale(1);
+
+        &:focus {
+            box-shadow: 0 0 10px 1px $blue70;
+        }
+
+        &:hover {
+            box-shadow: 0 0 10px 1px $blue40;
+        }
+
+        &:active {
+            transform: scale(1.1);
+        }
+    }
+
+    &__title {
+        max-width: 200px;
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: $black90;
+
+        @include l-clamp(2);
+    }
+
+    &__picture {
+        position: relative;
+        display: inline-block;
+        width: 325px;
+        height: 130px;
+        overflow: hidden;
+    }
+
+    &__category {
+        color: $blue40;
+    }
+
+    &__content {
+        display: flex;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 60px;
+        display: block;
+        width: 318px;
+        height: 128px;
+        object-fit: contain;
+    }
+}
+
+.video-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    &__svg {
+        z-index: 3;
+        width: 25px;
+        height: 25px;
+        fill: #fff;
+        transition: fill 0.3s;
+    }
+
+    &::before {
+        position: absolute;
+        z-index: 1;
+        width: 127px;
+        height: 127px;
+        content: "";
+        background-color: rgb(163, 187, 200);
+        border-radius: 50%;
+        opacity: 0.4;
+
+    }
+
+    &::after {
+        position: absolute;
+        z-index: 2;
+        width: 98px;
+        height: 98px;
+        content: "";
+        background-color: rgb(163, 187, 200);
+        border-radius: 50%;
+    }
+
+    &:hover {
+        &::before {
+            background-color: rgb(146, 188, 211);
+        }
+
+        &::after {
+            background-color: rgb(146, 188, 211);
+        }
+
+        svg {
+            fill: $blue60;
+        }
+    }
+}
+
 .mixitup-control-active {
     color: $black90;
 }
