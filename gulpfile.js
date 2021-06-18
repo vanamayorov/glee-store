@@ -27,7 +27,7 @@ function includeFile() {
         basepath: "@file",
       })
     )
-    .pipe(dest("app/"));
+    .pipe(dest("./app/"));
 }
 
 function spriteSvg() {
@@ -46,7 +46,7 @@ function spriteSvg() {
 
 function styles() {
   return src("app/scss/style.scss")
-    .pipe(scss({ outputStyle: "expanded" }))
+    .pipe(scss({ outputStyle: "minified" }))
     .pipe(concat("style.min.css"))
     .pipe(
       autoprefixer({ overrideBrowserslist: ["last 10 versions"], grid: true })
@@ -73,8 +73,8 @@ function scripts() {
   return src([
     "node_modules/jquery/dist/jquery.js",
     "node_modules/slick-carousel/slick/slick.js",
-    "node_modules/mixitup/dist/mixitup.js",
-    "node_modules/fancybox/dist/js/jquery.fancybox.js",
+    "node_modules/mixitup/dist/mixitup.min.js",
+    "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
     "app/js/main.js",
   ])
     .pipe(concat("main.min.js"))

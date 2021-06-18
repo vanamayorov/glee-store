@@ -1,0 +1,92 @@
+.article-card {
+    border-radius: 5px;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+    transition: box-shadow 0.3s;
+
+    &:hover {
+        box-shadow: 0 0 10px $grey90;
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 170px;
+        padding: 30px 30px 25px;
+        background-color: #fff;
+    }
+
+    &__topic {
+        text-decoration: none;
+        box-shadow: 0 0;
+        transition: box-shadow 0.3s, text-decoration 0.3s, transform 0.3s;
+        transform: scale(1);
+
+        &:focus {
+            box-shadow: 0 0 10px $grey92;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:active {
+            box-shadow: 0 0;
+            transform: scale(1.1);
+        }
+    }
+
+    &__category {
+        position: absolute;
+        top: -15px;
+        display: inline-block;
+        padding: 2px 30px;
+        margin-bottom: 20px;
+        font-family: 'Poppins', serif;
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: $blue40;
+        border-radius: 20px;
+    }
+
+    &__title {
+        line-height: 1.2;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 20px;
+        font-family: 'Rubik', sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        border-top: 1px solid $grey34;
+    }
+
+    &__link {
+        text-decoration: none;
+        box-shadow: 0 0;
+        transition: box-shadow 0.3s, text-decoration 0.3s, transform 0.3s;
+        transform: scale(1);
+
+        &:focus {
+            box-shadow: 0 0 10px $grey90;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:active {
+            box-shadow: 0 0;
+            transform: scale(1.1);
+        }
+
+        &--time {
+            margin-right: 30px;
+        }
+    }
+}

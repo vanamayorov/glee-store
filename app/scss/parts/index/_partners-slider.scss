@@ -1,0 +1,16 @@
+.partners-slider {
+    padding: 88px 0 85px;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        height: 87px;
+    }
+
+    &__logo {
+        object-position: center center;
+        object-fit: contain;
+        max-height: 87px;
+        margin: auto;
+    }
+}

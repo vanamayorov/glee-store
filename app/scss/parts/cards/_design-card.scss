@@ -1,0 +1,59 @@
+.design-card {
+    line-height: 1;
+
+    &__link {
+        display: block;
+        width: 370px;
+        height: 246px;
+        padding: 35px 0 30px 35px;
+        overflow: hidden;
+        background-color: $grey20;
+        border-radius: 5px 5px 0 0;
+        outline: transparent;
+        transition: box-shadow 0.3s, transform 0.3s;
+        transform: scale(1);
+
+        &:focus {
+            box-shadow: 0 0 10px 1px $blue70;
+        }
+
+        &:hover {
+            box-shadow: 0 0 10px 1px $blue40;
+        }
+
+        &:active {
+            transform: scale(1.1);
+        }
+    }
+
+    &__title {
+        max-width: 200px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        color: $black90;
+
+        @include l-clamp(2);
+    }
+
+    &__img-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        max-width: 325px;
+        height: 130px;
+    }
+
+    &__category {
+        color: $blue40;
+    }
+
+    &__img {
+        position: absolute;
+        top: -30px;
+        left: 60px;
+        display: block;
+        width: 318px;
+        height: 128px;
+        object-fit: contain;
+    }
+}

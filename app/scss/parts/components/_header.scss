@@ -1,0 +1,148 @@
+.header {
+    padding: 45px 0;
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.logo {
+    display: inline-block;
+    border: 1px solid transparent;
+    outline-color: transparent;
+    box-shadow: 0 0 0 0;
+    transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+    transform: scale(1);
+
+    &__img {
+        object-fit: contain;
+        max-width: 150px;
+        max-height: 40px;
+    }
+
+    &:focus {
+        box-shadow: 0 0 20px rgba($grey90, 1);
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        border-color: rgb(168, 166, 166);
+    }
+}
+
+.menu {
+    display: flex;
+    margin-left: 180px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+
+    &__item:not(:last-child) {
+        margin-right: 35px;
+    }
+
+    &__link {
+        padding: 10px 0;
+    }
+}
+
+.user-nav {
+    display: flex;
+
+    svg {
+        width: 18px;
+        height: 16px;
+        fill: $blue70;
+        transition: fill 0.3s;
+    }
+
+    &__btn {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        &:hover {
+            background-color: $blue40;
+
+            svg {
+                fill: #fff;
+            }
+        }
+    }
+
+    &__num {
+        position: absolute;
+        top: 10px;
+        left: calc(50% + 3px);
+        display: inline-block;
+        padding: 0 6px;
+        overflow-x: hidden;
+        font-size: 10px;
+        color: $blue70;
+        text-align: center;
+        background-color: #fff;
+        border-radius: 8px;
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        text-align: center;
+    }
+
+    &__link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90px;
+        height: 50px;
+        background-color: $bg-main;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 16px;
+        border: 1px solid transparent;
+        outline-color: transparent;
+        box-shadow: 0 0 0 0;
+        transition: background-color 0.3s, box-shadow 0.3s, border-color 0.3s;
+
+        &:first-child {
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+        }
+
+        &:last-child {
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }
+
+        &:not(:last-child)::after {
+            position: absolute;
+            top: 10px;
+            right: 0;
+            display: block;
+            width: 1px;
+            height: 32px;
+            content: "";
+            background-color: $orange70;
+        }
+
+        &:focus {
+            box-shadow: 0 0 20px rgba($grey90, 1);
+        }
+
+        &:hover {
+            background-color: $orange70;
+        }
+
+        &:active {
+            border-color: $grey90;
+        }
+    }
+}

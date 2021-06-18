@@ -1,0 +1,30 @@
+.new-design {
+    padding-bottom: 120px;
+
+    &__container {
+        padding: 0;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    &__filter {
+        margin: 0 auto 80px;
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__item {
+        max-width: 370px;
+        margin: 0 15px 30px;
+        font-family: "DMSans", sans-serif;
+        font-weight: 700;
+    }
+}

@@ -1,4 +1,19 @@
 $(function () {
+  var containerEl1 = $('[data-ref="mix-1"]');
+  var containerEl2 = $('[data-ref="mix-2"]');
+
+
+  var mixer1 = mixitup(containerEl1, {
+    controls: {
+      scope: "local",
+    },
+  });
+  var mixer2 = mixitup(containerEl2, {
+    controls: {
+      scope: "local",
+    },
+  });
+
   $(".top-slider__inner").slick({
     dots: true,
     arrows: false,
@@ -6,8 +21,12 @@ $(function () {
     // autoplaySpeed: 4000,
   });
 
-  $(".video-link").fancybox();
+  $(".partners-slider__list").slick({
+    dots: false,
+    arrows: false,
+    slidesToShow: 5,
+    // autoplay: true,
+  });
 
-  var mixer1 = mixitup(".products-week__items");
-  var mixer2 = mixitup(".new-design__items");
+  $(".video-link").fancybox();
 });

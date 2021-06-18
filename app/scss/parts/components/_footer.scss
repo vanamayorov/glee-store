@@ -1,0 +1,108 @@
+.subscribe-form {
+    display: flex;
+    margin-top: 25px;
+
+    &__input {
+        max-width: 170px;
+        max-height: 40px;
+        padding: 15px;
+        color: #234969;
+        background-color: $white90;
+        border: 2px solid transparent;
+        outline-color: transparent;
+        box-shadow: 0 0 0 0;
+        transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+
+        &::placeholder {
+            font-size: 12px;
+            color: inherit;
+        }
+
+        &:focus {
+            box-shadow: 0 0 20px rgba($grey90, 1);
+        }
+
+        &:hover {
+            background-color: $orange70;
+        }
+
+        &:active {
+            border-color: #234969;
+        }
+    }
+
+    &__submit {
+        min-width: 100px;
+        color: #fff;
+        background-color: $blue40;
+        border: none;
+    }
+}
+
+.footer {
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 2.2;
+    color: $grey60;
+
+    &__top {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        padding: 75px 0;
+        border-bottom: 1px solid $blue30;
+    }
+
+    &__col {
+        min-width: 300px;
+
+        &--form {
+            min-width: auto;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 20px;
+    }
+
+    &__text--location {
+        max-width: 200px;
+    }
+
+    &__before {
+        text-transform: uppercase;
+    }
+
+    &__link {
+        text-transform: none;
+    }
+
+    &__subtitle {
+        display: block;
+        margin: 15px 0 10px 0;
+        font-family: 'DMSans', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: $blue80;
+        text-transform: uppercase;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 90px;
+    }
+
+    &__links {
+        display: flex;
+    }
+
+    &__links-item {
+        padding: 0 14px;
+
+        &:not(:last-child) {
+            border-right: 1px solid grey;
+        }
+    }
+}
