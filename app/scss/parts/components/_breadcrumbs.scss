@@ -1,0 +1,19 @@
+.breadcrumbs {
+    display: flex;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+
+    &__item {
+        position: relative;
+        padding-right: 20px;
+
+        &:not(:last-child) {
+            &::after {
+                position: absolute;
+                top: 2px;
+                right: 8px;
+                content: "/";
+            }
+        }
+    }
+}
