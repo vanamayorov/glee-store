@@ -1,5 +1,10 @@
 .partners-slider {
     padding: 88px 0 85px;
+    background-color: $orange50;
+
+    @include media-w($md) {
+        padding: 50px 0;
+    }
 
     &__wrapper {
         display: flex;

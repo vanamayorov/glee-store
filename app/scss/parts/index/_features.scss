@@ -3,6 +3,11 @@
     color: $grey80;
     background-color: $white90;
 
+    @include media-w($md) {
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__item {
         display: flex;
         flex-direction: column;
@@ -14,6 +19,10 @@
 
         &:not(:last-child) {
             border-right: 1px solid $grey50;
+
+            @include media-w($md) {
+                border: none;
+            }
         }
     }
 

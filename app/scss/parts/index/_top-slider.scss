@@ -10,6 +10,15 @@
         height: 820px;
         margin: auto 0;
         margin-bottom: 15px;
+
+        @include media-w($lg) {
+            height: 610px;
+            padding: 0 20px;
+        }
+
+        @include media-w($md) {
+            flex-direction: column;
+        }
     }
 
     &__info {
@@ -19,6 +28,14 @@
         font-weight: 400;
         line-height: 1.6;
         color: $blue60;
+
+        @include media-w($xl) {
+            margin-right: 0;
+        }
+
+        @include media-w($md) {
+            text-align: center;
+        }
     }
 
     &__title {
@@ -31,6 +48,10 @@
         text-transform: uppercase;
 
         @include l-clamp(2);
+
+        @include media-w($md) {
+            font-size: 45px;
+        }
     }
 
     &__text {
@@ -39,6 +60,10 @@
         font-size: 18px;
 
         @include l-clamp(5);
+
+        @include media-w($md) {
+            margin: 0 auto 30px;
+        }
     }
 
     &__picture {
@@ -56,6 +81,22 @@
             content: "";
             background-image: linear-gradient(90deg, transparent 0%, #fff 100%);
             border-radius: 50%;
+
+            @include media-w($xl) {
+                right: 0;
+                bottom: -60px;
+                width: 75%;
+                height: 140%;
+            }
+
+            @include media-w($lg) {
+                bottom: -30px;
+                height: 125%;
+            }
+
+            @include media-w($md) {
+                content: none;
+            }
         }
     }
 
@@ -65,6 +106,20 @@
         max-width: 640px;
         height: 327px;
         max-height: 640px;
+
+        @include media-w($lg) {
+            width: 540px;
+        }
+
+        @include media-w($sm) {
+            width: 400px;
+            height: 250px;
+        }
+
+        @include media-w($xs) {
+            width: 300px;
+            height: 220px;
+        }
     }
 
     .slick-dots {
@@ -76,6 +131,10 @@
         font-family: "Rubik", sans-serif;
         font-size: 11px;
         font-weight: 500;
+
+        @include media-w($sm) {
+            bottom: 20px;
+        }
 
         li {
             button {

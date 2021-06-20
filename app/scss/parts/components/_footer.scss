@@ -1,6 +1,158 @@
+.footer {
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 2.2;
+    color: $grey60;
+
+    &__top {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        padding: 75px 0;
+        border-bottom: 1px solid $blue30;
+
+        @include media-w($md) {
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+        }
+    }
+
+    &__col {
+        min-width: 300px;
+
+        @include media-w($lg) {
+            min-width: unset;
+        }
+
+        @include media-w($md) {
+            min-width: 300px;
+        }
+
+        &--location {
+            @include media-w($md) {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        &--form {
+            min-width: auto;
+
+            @include media-w($md) {
+                display: flex;
+                flex-direction: column;
+                min-width: 300px;
+            }
+        }
+    }
+
+    &__logo {
+        margin-bottom: 20px;
+
+        @include media-w($md) {
+            margin: 0 auto 20px;
+        }
+    }
+
+    &__text {
+        &--location {
+            max-width: 200px;
+        }
+
+        &--form {
+            @include media-w($md) {
+                display: none;
+                max-width: 300px;
+            }
+        }
+    }
+
+    &__before {
+        text-transform: uppercase;
+    }
+
+    &__link {
+        text-transform: none;
+
+        @include media-w($lg) {
+            padding: 12px 0;
+        }
+    }
+
+    &__subtitle {
+        display: block;
+        margin: 15px 0 10px 0;
+        font-family: 'DMSans', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: $blue80;
+        text-transform: uppercase;
+        pointer-events: none;
+
+        @include media-w($md) {
+            pointer-events: auto;
+        }
+    }
+
+    &__svg {
+        display: none;
+        max-width: 15px;
+        max-height: 15px;
+        margin-left: 10px;
+        vertical-align: middle;
+        transition: transform 0.5s;
+        transform: rotate(-90deg);
+
+        @include media-w($md) {
+            display: inline-block;
+        }
+
+        &--rotate {
+            transform: rotate(90deg);
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 90px;
+
+        @include media-w($sm) {
+            justify-content: center;
+            line-height: 1;
+            text-align: center;
+        }
+    }
+
+    &__links {
+        display: flex;
+    }
+
+    &__links-item {
+        padding: 0 14px;
+
+        &:not(:last-child) {
+            border-right: 1px solid grey;
+        }
+    }
+
+    &__list {
+        @include media-w($md) {
+            display: none;
+        }
+    }
+}
+
 .subscribe-form {
     display: flex;
     margin-top: 25px;
+
+    @include media-w($md) {
+        display: none;
+    }
 
     &__input {
         max-width: 170px;
@@ -33,76 +185,9 @@
 
     &__submit {
         min-width: 100px;
+        height: 40px;
         color: #fff;
         background-color: $blue40;
         border: none;
-    }
-}
-
-.footer {
-    font-family: 'Rubik', sans-serif;
-    font-size: 14px;
-    line-height: 2.2;
-    color: $grey60;
-
-    &__top {
-        display: flex;
-        align-items: start;
-        justify-content: space-between;
-        padding: 75px 0;
-        border-bottom: 1px solid $blue30;
-    }
-
-    &__col {
-        min-width: 300px;
-
-        &--form {
-            min-width: auto;
-        }
-    }
-
-    &__logo {
-        margin-bottom: 20px;
-    }
-
-    &__text--location {
-        max-width: 200px;
-    }
-
-    &__before {
-        text-transform: uppercase;
-    }
-
-    &__link {
-        text-transform: none;
-    }
-
-    &__subtitle {
-        display: block;
-        margin: 15px 0 10px 0;
-        font-family: 'DMSans', sans-serif;
-        font-size: 16px;
-        font-weight: 700;
-        color: $blue80;
-        text-transform: uppercase;
-    }
-
-    &__bottom {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 90px;
-    }
-
-    &__links {
-        display: flex;
-    }
-
-    &__links-item {
-        padding: 0 14px;
-
-        &:not(:last-child) {
-            border-right: 1px solid grey;
-        }
     }
 }

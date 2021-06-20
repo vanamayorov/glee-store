@@ -20,31 +20,34 @@
           <img class="logo__img" src="images/logo.png" alt="Site logo" />
         </a>
 
-        <ul class="menu">
-          <li class="menu__item">
-            <a class="menu__link link-effect" href="#">Home +</a>
-          </li>
+        <div class="menu-wrapper">
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link link-effect" href="#">Home +</a>
+            </li>
 
-          <li class="menu__item">
-            <a class="menu__link link-effect" href="#">About</a>
-          </li>
+            <li class="menu__item">
+              <a class="menu__link link-effect" href="#">About</a>
+            </li>
 
-          <li class="menu__item">
-            <a class="menu__link link-effect" href="#">Services</a>
-          </li>
+            <li class="menu__item">
+              <a class="menu__link link-effect" href="#">Services</a>
+            </li>
 
-          <li class="menu__item">
-            <a class="menu__link link-effect" href="#">Pages +</a>
-          </li>
+            <li class="menu__item">
+              <a class="menu__link link-effect" href="#">Pages +</a>
+            </li>
 
-          <li class="menu__item">
-            <a class="menu__link link-effect" href="#">News</a>
-          </li>
+            <li class="menu__item">
+              <a class="menu__link link-effect" href="#">News</a>
+            </li>
 
-          <li class="menu__item">
-            <a class="menu__link link-effect" href="#">Contact</a>
-          </li>
-        </ul>
+            <li class="menu__item">
+              <a class="menu__link link-effect" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+
 
         <div class="user-nav">
           <button class="user-nav__btn circle-btn btn-effect" type="button">
@@ -81,6 +84,18 @@
             <span class="sr-only">Open menu</span>
         </button>
         </div>
+
+        <button class="header__btn header__btn--angle">
+          <svg>
+            <use xlink:href="images/sprite.svg#angle-btn"></use>
+          </svg>
+        </button>
+
+        <button class="header__btn header__btn--burger">
+          <svg>
+            <use xlink:href="images/sprite.svg#menu"></use>
+          </svg>
+        </button>
       </nav>
     </div>
   </div>
@@ -90,78 +105,78 @@
     <h1 class="sr-only">Glee - furniture online store</h1>
 
     <section class="top-slider">
-        <h2 class="sr-only">Top slider</h2>
-        <div class="container container--big">
-          <ul class="top-slider__inner">
-            <li class="top-slider__item">
-              <div class="top-slider__content">
-                <div class="top-slider__info">
-                  <h3 class="top-slider__title">smart and trendy</h3>
+  <h2 class="sr-only">Top slider</h2>
+  <div class="container container--big">
+    <ul class="top-slider__inner">
+      <li class="top-slider__item">
+        <div class="top-slider__content">
+          <div class="top-slider__info">
+            <h3 class="top-slider__title">smart and trendy</h3>
 
-                  <div class="top-slider__text">
-                    <p>
-                      Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                    </p>
-                  </div>
+            <div class="top-slider__text">
+              <p>
+                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              </p>
+            </div>
 
-                  <a class="square-btn btn-effect" href="#">
-                  Shop Now
-                  <svg>
-                    <use xlink:href="images/sprite.svg#arrow-btn"></use>
-                  </svg>
-                  </a>
-                </div>
-                <div class="top-slider__picture">
-                  <img class="top-slider__img" src="images/slider/product-photo.png" alt="Product photo">
-                </div>
-              </div>
-            </li>
-
-            <li class="top-slider__item">
-              <div class="top-slider__content">
-                <div class="top-slider__info">
-                  <h3 class="top-slider__title">smart and trendy</h3>
-                  <div class="top-slider__text">
-                    <p>
-                      Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                    </p>
-                  </div>
-                  <a class="square-btn btn-effect" href="#">
-                  Shop Now
-                  <svg>
-                    <use xlink:href="images/sprite.svg#arrow-btn"></use>
-                  </svg>
-                  </a>
-                </div>
-                <div class="top-slider__picture">
-                  <img class="top-slider__img" src="images/slider/product-photo.png" alt="Product photo">
-                </div>
-              </div>
-            </li>
-
-            <li class="top-slider__item">
-              <div class="top-slider__content">
-                <div class="top-slider__info">
-                  <h3 class="top-slider__title">smart and trendy</h3>
-                  <div class="top-slider__text">
-                    <p>
-                      Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                    </p>
-                  </div>
-                  <a class="square-btn btn-effect" href="#">
-                  Shop Now
-                  <svg>
-                    <use xlink:href="images/sprite.svg#arrow-btn"></use>
-                  </svg>
-                  </a>
-                </div>
-                <div class="top-slider__picture">
-                  <img class="top-slider__img" src="images/slider/product-photo.png" alt="Product photo">
-                </div>
-              </div>
-            </li>
-          </ul>
+            <a class="square-btn btn-effect" href="#">
+              Shop Now
+              <svg>
+                <use xlink:href="images/sprite.svg#arrow-btn"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="top-slider__picture">
+            <img class="top-slider__img" src="images/slider/product-photo.png" alt="Product photo">
+          </div>
         </div>
+      </li>
+
+      <li class="top-slider__item">
+        <div class="top-slider__content">
+          <div class="top-slider__info">
+            <h3 class="top-slider__title">smart and trendy</h3>
+            <div class="top-slider__text">
+              <p>
+                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              </p>
+            </div>
+            <a class="square-btn btn-effect" href="#">
+              Shop Now
+              <svg>
+                <use xlink:href="images/sprite.svg#arrow-btn"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="top-slider__picture">
+            <img class="top-slider__img" src="images/slider/product-photo.png" alt="Product photo">
+          </div>
+        </div>
+      </li>
+
+      <li class="top-slider__item">
+        <div class="top-slider__content">
+          <div class="top-slider__info">
+            <h3 class="top-slider__title">smart and trendy</h3>
+            <div class="top-slider__text">
+              <p>
+                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              </p>
+            </div>
+            <a class="square-btn btn-effect" href="#">
+              Shop Now
+              <svg>
+                <use xlink:href="images/sprite.svg#arrow-btn"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="top-slider__picture">
+            <img class="top-slider__img" src="images/slider/product-photo.png" alt="Product photo">
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
 </section>
     <div class="container container--big">
   <ul class="features">
@@ -649,6 +664,7 @@
 </section>
     <div class="container container--big">
   <a data-fancybox href="https://youtu.be/cisxRjsm0Kc" class="video-link" style="background-image: url('images/video-bg.jpg');">
+    <span class="sr-only">Watch video</span>
     <svg class="video-link__svg">
         <use xlink:href="images/sprite.svg#video"></use> 
     </svg>
@@ -657,7 +673,7 @@
     <section class="articles">
   <div class="container">
     <div class="articles__top">
-      <h2 class="title">Our Insights & Articles</h2>
+      <h2 class="title articles__title">Our Insights & Articles</h2>
 
       <a class="articles__link" href="#">
         View All
@@ -752,41 +768,41 @@
         </article>
       </li>
     </ul>
-    
-    <div class="partners-slider">
-      <ul class="partners-slider__list">
-        <li class="partners-slider__item">
-          <div class="partners-slider__wrapper">
-            <img class="partners-slider__logo" src="images/partners-slider/1.png" alt="Partner logo">
-          </div>
-        </li>
+  </div>
+</section>
+    <section class="partners-slider">
+  <div class="container">
+    <ul class="partners-slider__list">
+      <li class="partners-slider__item">
+        <div class="partners-slider__wrapper">
+          <img class="partners-slider__logo" src="images/partners-slider/1.png" alt="Partner logo">
+        </div>
+      </li>
 
-        <li class="partners-slider__item">
-          <div class="partners-slider__wrapper">
-            <img class="partners-slider__logo" src="images/partners-slider/2.png" alt="Partner logo">
-          </div>
-        </li>
+      <li class="partners-slider__item">
+        <div class="partners-slider__wrapper">
+          <img class="partners-slider__logo" src="images/partners-slider/2.png" alt="Partner logo">
+        </div>
+      </li>
 
-        <li class="partners-slider__item">
-          <div class="partners-slider__wrapper">
-            <img class="partners-slider__logo" src="images/partners-slider/3.png" alt="Partner logo">
-          </div>
-        </li>
+      <li class="partners-slider__item">
+        <div class="partners-slider__wrapper">
+          <img class="partners-slider__logo" src="images/partners-slider/3.png" alt="Partner logo">
+        </div>
+      </li>
 
-        <li class="partners-slider__item">
-          <div class="partners-slider__wrapper">
-            <img class="partners-slider__logo" src="images/partners-slider/4.png" alt="Partner logo">
-          </div>
-        </li>
+      <li class="partners-slider__item">
+        <div class="partners-slider__wrapper">
+          <img class="partners-slider__logo" src="images/partners-slider/4.png" alt="Partner logo">
+        </div>
+      </li>
 
-        <li class="partners-slider__item">
-          <div class="partners-slider__wrapper">
-            <img class="partners-slider__logo" src="images/partners-slider/5.png" alt="Partner logo">
-          </div>
-        </li>
-
-      </ul>
-    </div>
+      <li class="partners-slider__item">
+        <div class="partners-slider__wrapper">
+          <img class="partners-slider__logo" src="images/partners-slider/5.png" alt="Partner logo">
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
   </main>
@@ -794,7 +810,7 @@
   <footer class="footer">
   <div class="container">
     <div class="footer__top">
-      <div class="footer__col">
+      <div class="footer__col footer__col--location">
         <a class="logo footer__logo" href="#">
           <img class="logo__img" src="images/logo.png" alt="Site logo" />
         </a>
@@ -826,7 +842,12 @@
       </div>
 
       <div class="footer__col">
-        <span class="footer__subtitle">Services</span>
+        <span class="footer__subtitle">
+        Services
+        <svg class="footer__svg">
+          <use xlink:href="images/sprite.svg#angle-btn"></use>
+        </svg>
+        </span>
 
         <ul class="footer__list">
           <li class="footer__item">
@@ -852,7 +873,12 @@
       </div>
 
       <div class="footer__col">
-        <span class="footer__subtitle">Account</span>
+        <span class="footer__subtitle">
+        Account
+        <svg class="footer__svg">
+          <use xlink:href="images/sprite.svg#angle-btn"></use>
+        </svg>
+        </span>
 
         <ul class="footer__list">
           <li class="footer__item">
@@ -874,9 +900,14 @@
       </div>
 
       <div class="footer__col footer__col--form">
-        <span class="footer__subtitle">Newsletter</span>
+        <span class="footer__subtitle">
+        Newsletter
+        <svg class="footer__svg">
+            <use xlink:href="images/sprite.svg#angle-btn"></use>
+          </svg>
+        </span>
 
-        <div class="footer__text">
+        <div class="footer__text footer__text--form">
           <p>
             Subscribe by our newsletter and get update protidin.
           </p>

@@ -1,6 +1,10 @@
 .new-design {
     padding-bottom: 120px;
 
+    @include media-w($md) {
+        padding-bottom: 60px;
+    }
+
     &__container {
         padding: 0;
     }
@@ -8,10 +12,22 @@
     &__title {
         margin-bottom: 25px;
         text-align: center;
+
+        @include media-w($md) {
+            margin-bottom: 10px;
+        }
     }
 
     &__filter {
         margin: 0 auto 80px;
+
+        @include media-w($md) {
+            margin-bottom: 30px;
+        }
+
+        @include media-w($xs) {
+            justify-content: center;
+        }
     }
 
     &__items {
