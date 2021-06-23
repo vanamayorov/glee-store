@@ -23,6 +23,7 @@
 
 // CATALOGUE
 @import "parts/components/top-row";
+@import "parts/filters/filters";
 @import "parts/components/breadcrumbs";
 
 .catalogue {
@@ -35,71 +36,5 @@
 
     &__filters {
         width: 270px;
-    }
-}
-
-.filter {
-    color: $blue70;
-
-    &__title {
-        position: relative;
-        display: inline-block;
-        padding-right: 55px;
-        margin-bottom: 30px;
-        font-weight: 700;
-        text-transform: uppercase;
-
-        &::after {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            width: 38px;
-            height: 3px;
-            content: "";
-            background-color: $blue40;
-            transform: translateY(-50%);
-        }
-    }
-
-    &__item {
-        &:not(:last-child) {
-            margin-bottom: 70px;
-        }
-    }
-
-    &__checkbox {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 7px 23px 7px 15px;
-        font-weight: 500;
-    }
-
-    &__input {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        clip: rect(0 0 0 0);
-
-        &:checked+.filter__checkbox {
-            background-color: rgba(163, 187, 200, 0.2);
-            border-radius: 5px;
-        }
-    }
-}
-
-.filter-category {
-    &__item {
-        &:not(:last-child) {
-            margin-bottom: 3px;
-        }
-    }
-
-    &__svg {
-        width: 6px;
-        height: 10px;
-        fill: $blue50;
-        transform: rotate(180deg);
     }
 }

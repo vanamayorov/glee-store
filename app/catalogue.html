@@ -126,6 +126,7 @@
       <ul class="filter-category__list">
         <li class="filter-category__item">
           <label class="filter__label">
+            <span class="sr-only">Choose chair category</span>
             <input class="filter__input" type="checkbox">
             <div class="filter__checkbox">
                 <span class="filter-category__subtitle">Chair</span>
@@ -138,6 +139,7 @@
 
         <li class="filter-category__item">
           <label class="filter__label">
+            <span class="sr-only">Choose table category</span>
             <input class="filter__input" type="checkbox">
             <div class="filter__checkbox">
                 <span class="filter-category__subtitle">Table</span>
@@ -150,6 +152,7 @@
 
         <li class="filter-category__item">
           <label class="filter__label">
+            <span class="sr-only">Choose lamp category</span>
             <input class="filter__input" type="checkbox">
             <div class="filter__checkbox">
                 <span class="filter-category__subtitle">Lamp</span>
@@ -162,6 +165,7 @@
 
         <li class="filter-category__item">
           <label class="filter__label">
+            <span class="sr-only">Choose watch category</span>
             <input class="filter__input" type="checkbox">
             <div class="filter__checkbox">
                 <span class="filter-category__subtitle">Watch</span>
@@ -174,6 +178,7 @@
 
         <li class="filter-category__item">
           <label class="filter__label">
+            <span class="sr-only">Choose clock category</span>
             <input class="filter__input" type="checkbox">
             <div class="filter__checkbox">
                 <span class="filter-category__subtitle">Clock</span>
@@ -186,7 +191,148 @@
       </ul>
     </form>
   </li>
+
+  <li class="filter__item filter-price">
+    <h3 class="filter__title">price</h3>
+    <span class="sr-only">Choose price range</span>
+    <form class="filter-price__form">
+      <input class="filter-price__input" type="text" data-min="0" data-max="1000" data-from="100" data-to="500">
+
+      <div class="filter-price__box">
+        <span class="filter-price__from"></span>
+        <span class="filter-price__to"></span>
+      </div>
+    </form>
+  </li>
+
+  <li class="filter__item filter-brand">
+    <h3 class="filter__title">brand</h3>
+    <form class="filter-brand__form">
+      <ul class="filter-brand__list">
+        <li class="filter-brand__item">
+          <label class="filter__label">
+            <span class="sr-only">Choose rfl brand</span>
+            <input class="filter__input" type="checkbox">
+            <div class="filter__checkbox">
+                <span class="filter-brand__subtitle">RFL</span>
+                <span class="filter-brand__qty">(10)</span>
+            </div>
+          </label>
+        </li>
+
+        <li class="filter-brand__item">
+          <label class="filter__label">
+            <span class="sr-only">Choose brothers brand</span>
+            <input class="filter__input" type="checkbox">
+            <div class="filter__checkbox">
+                <span class="filter-brand__subtitle">Brothers</span>
+                <span class="filter-brand__qty">(21)</span>
+            </div>
+          </label>
+        </li>
+
+        <li class="filter-brand__item">
+          <label class="filter__label">
+            <span class="sr-only">Choose regal brand</span>
+            <input class="filter__input" type="checkbox">
+            <div class="filter__checkbox">
+                <span class="filter-brand__subtitle">Regal</span>
+                <span class="filter-brand__qty">(3)</span>
+            </div>
+          </label>
+        </li>
+
+        <li class="filter-brand__item">
+          <label class="filter__label">
+            <span class="sr-only">Choose nadia brand</span>
+            <input class="filter__input" type="checkbox">
+            <div class="filter__checkbox">
+                <span class="filter-brand__subtitle">Nadia</span>
+                <span class="filter-brand__qty">(14)</span>
+            </div>
+          </label>
+        </li>
+
+        <li class="filter-brand__item">
+          <label class="filter__label">
+            <span class="sr-only">Choose otobi brand</span>
+            <input class="filter__input" type="checkbox">
+            <div class="filter__checkbox">
+                <span class="filter-brand__subtitle">Otobi</span>
+                <span class="filter-brand__qty">(6)</span>
+            </div>
+          </label>
+        </li>
+      </ul>
+    </form>
+  </li>
+
+  <li class="filter__item filter-recent">
+    <h3 class="filter__title">recent products</h3>
+    <ul class="filter-recent__list">
+      <li class="filter-recent__item">
+        <a class="filter-recent__link" href="#">
+          <div class="filter-recent__box">
+            <img class="filter-recent__img" src="images/recent-products/1.png" alt="Product image">
+          </div>
+          <div class="filter-recent__content">
+            <h4 class="filter-recent__subtitle">Pendant lamp</h4>
+            <div class="filter-recent__rating" data-rateyo-rating="4"></div>
+            <span class="filter-recent__price">23$</span>
+          </div>
+        </a>
+      </li>
+
+      <li class="filter-recent__item">
+        <a class="filter-recent__link" href="#">
+          <div class="filter-recent__box">
+            <img class="filter-recent__img" src="images/recent-products/2.png" alt="Product image">
+          </div>
+          <div class="filter-recent__content">
+            <h4 class="filter-recent__subtitle">Pendant lamp</h4>
+            <div class="filter-recent__rating" data-rateyo-rating="4"></div>
+            <span class="filter-recent__price">23$</span>
+          </div>
+        </a>
+      </li>
+
+      <li class="filter-recent__item">
+        <a class="filter-recent__link" href="#">
+          <div class="filter-recent__box">
+            <img class="filter-recent__img" src="images/recent-products/3.png" alt="Product image">
+          </div>
+          <div class="filter-recent__content">
+            <h4 class="filter-recent__subtitle">Pendant lamp</h4>
+            <div class="filter-recent__rating" data-rateyo-rating="4"></div>
+            <span class="filter-recent__price">23$</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </li>
 </ul>
+      <div class="catalogue-content">
+  <div class="catalogue-content__top filter-top">
+    <div class="filters-top__buttons">
+      <span class="filters-top__text">View</span>
+      <button class="filters-top__btn">
+        <svg>
+            <use xlink:href="images/sprites/sprite.svg#grid-1"></use>
+        </svg>
+      </button>
+
+      <button class="filters-top__btn">
+        <svg>
+            <use xlink:href="images/sprites/sprite.svg#grid-2"></use>
+        </svg>
+      </button>
+    </div>
+
+    <form class="filter-top__form">
+    
+    </form>
+  </div>
+</div>
     </div>
   </div>
 </section>
