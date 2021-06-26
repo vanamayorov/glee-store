@@ -1,0 +1,25 @@
+@@include('parts/components/_head.html', {
+  "title": "About us"
+})
+
+<body>
+
+  @@include('parts/components/_header.html')
+  
+  <main class="main">
+    @@include('parts/components/_top-row.html', {
+      "row-name": "About us"
+    })
+
+    @@include('parts/about/_mission.html')
+    @@include('parts/about/_achievements.html')
+    @@include('parts/about/_team.html')
+
+    @@include('parts/components/_articles.html', {
+      "additional": "articles--about"
+    }) 
+    @@include('parts/components/_partners-slider.html')
+  </main>
+
+  @@include('parts/components/_footer.html') 
+  @@include('parts/components/_scripts.html')

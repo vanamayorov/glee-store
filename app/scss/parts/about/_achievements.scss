@@ -1,0 +1,67 @@
+.achievements {
+    padding: 85px 0 80px;
+    font-size: 18px;
+    font-weight: 700;
+    color: $blue70;
+    background-color: $bg-main;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item {
+        position: relative;
+        width: 100%;
+        max-width: 270px;
+        padding-top: 70px;
+        text-align: center;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 70px;
+            height: 65px;
+            content: "";
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            transform: translateX(-50%);
+        }
+
+        &::after {
+            position: absolute;
+            top: 30px;
+            right: 90px;
+            width: 35px;
+            height: 35px;
+            content: "";
+            background-color: rgba(163, 187, 200, 0.6);
+            border-radius: 50%;
+        }
+
+        &--rate::before {
+            background-image: url('../images/icons/rate.svg');
+        }
+
+        &--delivery::before {
+            background-image: url('../images/icons/delivery.svg');
+        }
+
+        &--time::before {
+            background-image: url('../images/icons/time.svg');
+        }
+
+        &--brands::before {
+            background-image: url('../images/icons/brands.svg');
+        }
+    }
+
+    &__rate {
+        display: block;
+        font-size: 36px;
+    }
+}

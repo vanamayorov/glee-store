@@ -1,0 +1,123 @@
+.mission {
+    padding: 120px 0;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__img {
+        align-self: stretch;
+        width: 100%;
+        max-width: 570px;
+        margin-right: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__content {
+        max-width: 600px;
+        padding: 70px 0 95px 30px;
+        font-family: 'Rubik', sans-serif;
+        line-height: 1.9;
+        color: $blue70;
+    }
+
+    &__top {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 40px;
+        line-height: 0.7;
+    }
+
+    &__num {
+        margin-right: 20px;
+        font-size: 140px;
+        font-weight: 700;
+        color: $blue40;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        color: $blue70;
+    }
+
+    &__text {
+        margin-bottom: 55px;
+
+        @include l-clamp(10);
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 0 0;
+        line-height: 1.2;
+        border-top: 1px solid $white70;
+    }
+
+    &__statistic {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 33.3%;
+        font-family: 'DMSans', sans-serif;
+        font-weight: 700;
+        color: $black60;
+
+        &:not(:last-child) {
+            border-right: 1px solid $white70;
+        }
+    }
+
+    &__wrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 13px 0 13px 60px;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 47px;
+            height: 41px;
+            content: "";
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            transform: translateY(-50%);
+        }
+
+        &--project::before {
+            background-image: url('../images/icons/projects.svg');
+        }
+
+        &--revenue::before {
+            background-image: url('../images/icons/revenue.svg');
+        }
+
+        &--awards::before {
+            background-image: url('../images/icons/awards.svg');
+        }
+    }
+
+    &__number {
+        font-size: 36px;
+        color: $blue70;
+    }
+}

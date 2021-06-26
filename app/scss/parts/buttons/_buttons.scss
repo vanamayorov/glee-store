@@ -108,4 +108,11 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         }
     }
+
+    &--round {
+        min-width: 170px;
+        padding: 10px 50px 10px 15px;
+        font-weight: 700;
+        border-radius: 5px;
+    }
 }

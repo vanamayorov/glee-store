@@ -21,6 +21,10 @@
         }
     }
 
+    &--about {
+        padding-top: 0;
+    }
+
     &__title {
         @include media-w($xs) {
             line-height: 1;

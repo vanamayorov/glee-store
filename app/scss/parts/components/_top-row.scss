@@ -1,18 +1,23 @@
 .top-row {
-    padding: 17px 0 19px;
+    height: 125px;
+    font-size: 14px;
     color: $blue75;
     background-color: $blue20;
 
     &__inner {
         display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: center;
+        height: 100%;
     }
 
     &__title {
+        margin-bottom: 2px;
         font-family: 'DMSans', sans-serif;
         font-size: 36px;
         font-weight: 400;
+        line-height: 1.2;
     }
 }
