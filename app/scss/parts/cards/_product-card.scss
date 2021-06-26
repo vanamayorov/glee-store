@@ -23,11 +23,15 @@
         max-height: 206px;
     }
 
-    &__text {
+    &__inner {
         margin-top: auto;
     }
 
-    svg {
+    &__rating {
+        display: none;
+    }
+
+    &__svg {
         width: 18px;
         height: 18px;
         fill: $blue40;
@@ -64,6 +68,21 @@
         font-weight: 500;
         color: $blue70;
 
-        @include l-clamp(1);
+        @include l-clamp(3);
+    }
+
+    &__desc {
+        display: none;
+    }
+
+    &__buttons {
+        display: none;
+        padding: 18px 25px;
+        background-color: #fbfbfb;
+        border-radius: 30px;
+    }
+
+    &__button {
+        background-color: #fff;
     }
 }

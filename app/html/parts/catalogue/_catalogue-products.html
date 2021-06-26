@@ -1,22 +1,101 @@
 <div class="catalogue-content">
-  <div class="catalogue-content__top filter-top">
-    <div class="filters-top__buttons">
-      <span class="filters-top__text">View</span>
-      <button class="filters-top__btn">
-        <svg>
-            <use xlink:href="images/sprites/sprite.svg#grid-1"></use>
-        </svg>
-      </button>
+    <div class="catalogue-content__top filter-top">
+        <div class="filter-top__buttons">
+            <span class="filter-top__text">View</span>
+            <button class="filter-top__btn filter-top__btn--grid filter-top__btn--active">
+                <svg class="filter-top__svg">
+                    <use xlink:href="images/sprite.svg#grid-1"></use>
+                </svg>
+            </button>
 
-      <button class="filters-top__btn">
-        <svg>
-            <use xlink:href="images/sprites/sprite.svg#grid-2"></use>
-        </svg>
-      </button>
+            <button class="filter-top__btn filter-top__btn--row">
+                <svg class="filter-top__svg">
+                    <use xlink:href="images/sprite.svg#grid-2"></use>
+                </svg>
+            </button>
+        </div>
+
+        <form class="filter-top__form">
+            <select class="filter-top__select filter-top__select--sort">
+                <span class="sr-only">Choose sorting</span>
+                <option value="default" class="filter-top__option">Sort by default</option>
+                <option value="default" class="filter-top__option">Sort by default</option>
+                <option value="default" class="filter-top__option">Sort by default</option>
+                <option value="default" class="filter-top__option">Sort by default</option>
+
+            </select>
+
+            <select class="filter-top__select filter-top__select--view">
+                <span class="sr-only">Choose view</span>
+                <option value="9" class="filter-top__option">Show 9</option>
+                <option value="1" class="filter-top__option">Show 1</option>
+                <option value="2" class="filter-top__option">Show 2</option>
+                <option value="3" class="filter-top__option">Show 3</option>
+            </select>
+        </form>
     </div>
 
-    <form class="filter-top__form">
-    
-    </form>
-  </div>
+    <ul class="catalogue-content__products">
+        <li class="catalogue-content__item">
+            @@include('../cards/_product-card.html', {
+            "title": "Wooden chair",
+            "price": "29.00",
+            "path": "images/products-week/1.png",
+            "rating": "4",
+            "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+            })
+        </li>
+
+        <li class="catalogue-content__item">
+            @@include('../cards/_product-card.html', {
+            "title": "Wooden chair",
+            "price": "29.00",
+            "path": "images/products-week/1.png",
+            "rating": "4",
+            "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+            })
+        </li>
+        <li class="catalogue-content__item">
+            @@include('../cards/_product-card.html', {
+            "title": "Wooden chair",
+            "price": "29.00",
+            "path": "images/products-week/1.png",
+            "rating": "4",
+            "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+            })
+        </li>
+
+        <li class="catalogue-content__item">
+            @@include('../cards/_product-card.html', {
+            "title": "Wooden chair",
+            "price": "29.00",
+            "path": "images/products-week/1.png",
+            "rating": "4",
+            "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+            })
+        </li>
+        <li class="catalogue-content__item">
+            @@include('../cards/_product-card.html', {
+            "title": "Wooden chair",
+            "price": "29.00",
+            "path": "images/products-week/1.png",
+            "rating": "4",
+            "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+            })
+        </li>
+
+        <li class="catalogue-content__item">
+            @@include('../cards/_product-card.html', {
+            "title": "Wooden chair",
+            "price": "29.00",
+            "path": "images/products-week/1.png",
+            "rating": "4",
+            "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+            })
+        </li>
+    </ul>
+
+    <div class="catalogue-content__pagination">
+        @@include("../components/_pagination.html")
+    </div>
 </div>

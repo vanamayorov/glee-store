@@ -1,3 +1,11 @@
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
+
 @mixin l-clamp($r) {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -6,15 +14,8 @@
 }
 
 @mixin media-w($w) {
-    @media only screen and (max-width: $w) {
+    @media (max-width: $w) {
         @content;
     }
 }
 
-@function max($numbers...) {
-    @return m#{a}x(#{$numbers});
-}
-
-@function min($numbers...) {
-    @return m#{i}n(#{$numbers});
-}

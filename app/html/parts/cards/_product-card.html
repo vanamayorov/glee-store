@@ -1,0 +1,53 @@
+<article class="product-card">
+    <div class="product-card__img-wrapper">
+        <img class="product-card__img" src="@@path" alt="@@title photo">
+    </div>
+
+    <div class="product-card__inner">
+        <div class="product-card__text">
+            <h3 class="product-card__title">@@title</h3>
+            <div class="product-card__rating" data-rateyo-rating="@@rating"></div>
+            <span class="product-card__price">$@@price</span>
+            <div class="product-card__desc">
+                @@text
+            </div>
+
+            <div class="product-card__buttons">
+                <button class="product-card__button btn-effect">
+                    <svg class="product-card__svg">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                    </svg>
+                </button>
+
+                <button class="product-card__button btn-effect">
+                    <svg class="product-card__svg">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card__box">
+        <button class="product-card__btn product-card__btn--search circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#search"></use>
+            </svg>
+            <span class="sr-only">Search @@title</span>
+        </button>
+
+        <button class="product-card__btn product-card__btn--cart circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#cart"></use>
+            </svg>
+            <span class="sr-only">Add @@title to cart</span>
+        </button>
+
+        <button class="product-card__btn product-card__btn--like circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#heart"></use>
+            </svg>
+            <span class="sr-only">Add @@title to liked products</span>
+        </button>
+    </div>
+</article>

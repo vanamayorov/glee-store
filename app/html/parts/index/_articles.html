@@ -1,100 +1,46 @@
 <section class="articles">
-  <div class="container">
-    <div class="articles__top">
-      <h2 class="title articles__title">Our Insights & Articles</h2>
+    <div class="container">
+        <div class="articles__top">
+            <h2 class="title articles__title">Our Insights & Articles</h2>
 
-      <a class="articles__link" href="#">
-        View All
-        <svg class="articles__svg">
-            <use xlink:href="images/sprite.svg#after-link"></use> 
-        </svg>
-      </a>
+            <a class="articles__link" href="#">
+                View All
+                <svg class="articles__svg">
+                    <use xlink:href="images/sprite.svg#after-link"></use>
+                </svg>
+            </a>
+        </div>
+
+        <ul class="articles__list">
+            <li class="articles__item">
+                @@include("../cards/_article-card.html", {
+                "title": "Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+                "time": "28 january, 2020",
+                "author": "admin",
+                "path": "images/articles/1.jpg",
+                "alt": "Article"
+                })
+            </li>
+
+            <li class="articles__item">
+                @@include("../cards/_article-card.html", {
+                "title": "Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+                "time": "28 january, 2020",
+                "author": "admin",
+                "path": "images/articles/2.jpg",
+                "alt": "Article"
+                })
+            </li>
+
+            <li class="articles__item">
+                @@include("../cards/_article-card.html", {
+                "title": "Rncididunt ut labore et dolore magna aliqua. Ut enim",
+                "time": "28 january, 2020",
+                "author": "admin",
+                "path": "images/articles/3.jpg",
+                "alt": "Article"
+                })
+            </li>
+        </ul>
     </div>
-
-    <ul class="articles__list">
-      <li class="articles__item">
-        <article class="article-card">
-          <img class="article-card__img" src="images/articles/1.jpg" alt="Article image">
-
-          <div class="article-card__content">
-            <a class="article-card__category" href="#">news</a>
-
-            <a class="article-card__topic" href="#">
-              <h3 class="article-card__title">
-                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-              </h3>
-            </a>
-
-            <div class="article-card__bottom">
-              <a class="article-card__link article-card__link--time" href="#">
-                <time datetime="2020-01-28">
-                28 january, 2020
-                </time>
-              </a>
-
-              <a class="article-card__link" href="#">
-                By admin
-              </a>
-            </div>
-          </div>
-        </article>
-      </li>
-
-      <li class="articles__item">
-        <article class="article-card">
-          <img class="article-card__img" src="images/articles/2.jpg" alt="Article image">
-
-          <div class="article-card__content">
-            <a class="article-card__category" href="#">news</a>
-
-            <a class="article-card__topic" href="#">
-              <h3 class="article-card__title">
-                Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              </h3>
-            </a>
-
-            <div class="article-card__bottom">
-              <a class="article-card__link article-card__link--time" href="#">
-                <time datetime="2020-01-28">
-                    28 january, 2020
-                </time>
-              </a>
-
-              <a class="article-card__link" href="#">
-                By admin
-              </a>
-            </div>
-          </div>
-        </article>
-      </li>
-
-      <li class="articles__item">
-        <article class="article-card">
-          <img class="article-card__img" src="images/articles/3.jpg" alt="Article image">
-
-          <div class="article-card__content">
-            <a class="article-card__category" href="#">news</a>
-
-            <a class="article-card__topic" href="#">
-              <h3 class="article-card__title">
-                Rncididunt ut labore et dolore magna aliqua. Ut enim
-              </h3>
-            </a>
-
-            <div class="article-card__bottom">
-              <a class="article-card__link article-card__link--time" href="#">
-                <time datetime="2020-01-28">
-                    28 january, 2020
-                </time>
-              </a>
-
-              <a class="article-card__link" href="#">
-                By admin
-              </a>
-            </div>
-          </div>
-        </article>
-      </li>
-    </ul>
-  </div>
 </section>

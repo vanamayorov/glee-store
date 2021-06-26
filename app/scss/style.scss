@@ -25,16 +25,5 @@
 @import "parts/components/top-row";
 @import "parts/filters/filters";
 @import "parts/components/breadcrumbs";
-
-.catalogue {
-    padding: 120px 0;
-
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__filters {
-        width: 270px;
-    }
-}
+@import "parts/catalogue/catalogue";
+@import "parts/components/pagination";

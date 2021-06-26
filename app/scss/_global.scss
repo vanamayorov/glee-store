@@ -74,6 +74,11 @@ body {
         box-shadow: 0 0 0 0 transparent;
         transition: color 0.3s, outline-color 0.3s, box-shadow 0.3s;
 
+        @include media-w($md) {
+            padding: 10px 0;
+        }
+
+
         &:focus {
             box-shadow: 0 0 20px rgba($grey90, 1);
         }

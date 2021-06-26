@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Glee - furniture online store | Main page</title>
+    <title>Glee - furniture online store | Product list 1</title>
     <link rel="icon" href="images/favicon/logo-icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
@@ -119,6 +119,11 @@
     <section class="catalogue">
   <div class="container">
     <div class="catalogue__inner">
+      <button class="catalogue__btn">
+        <svg class="catalogue__svg">
+          <use xlink:href="images/sprite.svg#filter"></use>
+        </svg>
+      </button>
       <ul class="catalogue__filters filter">
   <li class="filter__item filter-category">
     <h3 class="filter__title">category</h3>
@@ -312,28 +317,454 @@
   </li>
 </ul>
       <div class="catalogue-content">
-  <div class="catalogue-content__top filter-top">
-    <div class="filters-top__buttons">
-      <span class="filters-top__text">View</span>
-      <button class="filters-top__btn">
-        <svg>
-            <use xlink:href="images/sprites/sprite.svg#grid-1"></use>
-        </svg>
-      </button>
+    <div class="catalogue-content__top filter-top">
+        <div class="filter-top__buttons">
+            <span class="filter-top__text">View</span>
+            <button class="filter-top__btn filter-top__btn--grid filter-top__btn--active">
+                <svg class="filter-top__svg">
+                    <use xlink:href="images/sprite.svg#grid-1"></use>
+                </svg>
+            </button>
 
-      <button class="filters-top__btn">
-        <svg>
-            <use xlink:href="images/sprites/sprite.svg#grid-2"></use>
-        </svg>
-      </button>
+            <button class="filter-top__btn filter-top__btn--row">
+                <svg class="filter-top__svg">
+                    <use xlink:href="images/sprite.svg#grid-2"></use>
+                </svg>
+            </button>
+        </div>
+
+        <form class="filter-top__form">
+            <select class="filter-top__select filter-top__select--sort">
+                <span class="sr-only">Choose sorting</span>
+                <option value="default" class="filter-top__option">Sort by default</option>
+                <option value="default" class="filter-top__option">Sort by default</option>
+                <option value="default" class="filter-top__option">Sort by default</option>
+                <option value="default" class="filter-top__option">Sort by default</option>
+
+            </select>
+
+            <select class="filter-top__select filter-top__select--view">
+                <span class="sr-only">Choose view</span>
+                <option value="9" class="filter-top__option">Show 9</option>
+                <option value="1" class="filter-top__option">Show 1</option>
+                <option value="2" class="filter-top__option">Show 2</option>
+                <option value="3" class="filter-top__option">Show 3</option>
+            </select>
+        </form>
     </div>
 
-    <form class="filter-top__form">
-    
-    </form>
-  </div>
+    <ul class="catalogue-content__products">
+        <li class="catalogue-content__item">
+            <article class="product-card">
+    <div class="product-card__img-wrapper">
+        <img class="product-card__img" src="images/products-week/1.png" alt="Wooden chair photo">
+    </div>
+
+    <div class="product-card__inner">
+        <div class="product-card__text">
+            <h3 class="product-card__title">Wooden chair</h3>
+            <div class="product-card__rating" data-rateyo-rating="4"></div>
+            <span class="product-card__price">$29.00</span>
+            <div class="product-card__desc">
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            </div>
+
+            <div class="product-card__buttons">
+                <button class="product-card__button btn-effect">
+                    <svg class="product-card__svg">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                    </svg>
+                </button>
+
+                <button class="product-card__button btn-effect">
+                    <svg class="product-card__svg">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card__box">
+        <button class="product-card__btn product-card__btn--search circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#search"></use>
+            </svg>
+            <span class="sr-only">Search Wooden chair</span>
+        </button>
+
+        <button class="product-card__btn product-card__btn--cart circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#cart"></use>
+            </svg>
+            <span class="sr-only">Add Wooden chair to cart</span>
+        </button>
+
+        <button class="product-card__btn product-card__btn--like circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#heart"></use>
+            </svg>
+            <span class="sr-only">Add Wooden chair to liked products</span>
+        </button>
+    </div>
+</article>
+        </li>
+
+        <li class="catalogue-content__item">
+            <article class="product-card">
+    <div class="product-card__img-wrapper">
+        <img class="product-card__img" src="images/products-week/1.png" alt="Wooden chair photo">
+    </div>
+
+    <div class="product-card__inner">
+        <div class="product-card__text">
+            <h3 class="product-card__title">Wooden chair</h3>
+            <div class="product-card__rating" data-rateyo-rating="4"></div>
+            <span class="product-card__price">$29.00</span>
+            <div class="product-card__desc">
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            </div>
+
+            <div class="product-card__buttons">
+                <button class="product-card__button btn-effect">
+                    <svg class="product-card__svg">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                    </svg>
+                </button>
+
+                <button class="product-card__button btn-effect">
+                    <svg class="product-card__svg">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card__box">
+        <button class="product-card__btn product-card__btn--search circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#search"></use>
+            </svg>
+            <span class="sr-only">Search Wooden chair</span>
+        </button>
+
+        <button class="product-card__btn product-card__btn--cart circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#cart"></use>
+            </svg>
+            <span class="sr-only">Add Wooden chair to cart</span>
+        </button>
+
+        <button class="product-card__btn product-card__btn--like circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#heart"></use>
+            </svg>
+            <span class="sr-only">Add Wooden chair to liked products</span>
+        </button>
+    </div>
+</article>
+        </li>
+        <li class="catalogue-content__item">
+            <article class="product-card">
+    <div class="product-card__img-wrapper">
+        <img class="product-card__img" src="images/products-week/1.png" alt="Wooden chair photo">
+    </div>
+
+    <div class="product-card__inner">
+        <div class="product-card__text">
+            <h3 class="product-card__title">Wooden chair</h3>
+            <div class="product-card__rating" data-rateyo-rating="4"></div>
+            <span class="product-card__price">$29.00</span>
+            <div class="product-card__desc">
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            </div>
+
+            <div class="product-card__buttons">
+                <button class="product-card__button btn-effect">
+                    <svg class="product-card__svg">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                    </svg>
+                </button>
+
+                <button class="product-card__button btn-effect">
+                    <svg class="product-card__svg">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card__box">
+        <button class="product-card__btn product-card__btn--search circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#search"></use>
+            </svg>
+            <span class="sr-only">Search Wooden chair</span>
+        </button>
+
+        <button class="product-card__btn product-card__btn--cart circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#cart"></use>
+            </svg>
+            <span class="sr-only">Add Wooden chair to cart</span>
+        </button>
+
+        <button class="product-card__btn product-card__btn--like circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#heart"></use>
+            </svg>
+            <span class="sr-only">Add Wooden chair to liked products</span>
+        </button>
+    </div>
+</article>
+        </li>
+
+        <li class="catalogue-content__item">
+            <article class="product-card">
+    <div class="product-card__img-wrapper">
+        <img class="product-card__img" src="images/products-week/1.png" alt="Wooden chair photo">
+    </div>
+
+    <div class="product-card__inner">
+        <div class="product-card__text">
+            <h3 class="product-card__title">Wooden chair</h3>
+            <div class="product-card__rating" data-rateyo-rating="4"></div>
+            <span class="product-card__price">$29.00</span>
+            <div class="product-card__desc">
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            </div>
+
+            <div class="product-card__buttons">
+                <button class="product-card__button btn-effect">
+                    <svg class="product-card__svg">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                    </svg>
+                </button>
+
+                <button class="product-card__button btn-effect">
+                    <svg class="product-card__svg">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card__box">
+        <button class="product-card__btn product-card__btn--search circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#search"></use>
+            </svg>
+            <span class="sr-only">Search Wooden chair</span>
+        </button>
+
+        <button class="product-card__btn product-card__btn--cart circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#cart"></use>
+            </svg>
+            <span class="sr-only">Add Wooden chair to cart</span>
+        </button>
+
+        <button class="product-card__btn product-card__btn--like circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#heart"></use>
+            </svg>
+            <span class="sr-only">Add Wooden chair to liked products</span>
+        </button>
+    </div>
+</article>
+        </li>
+        <li class="catalogue-content__item">
+            <article class="product-card">
+    <div class="product-card__img-wrapper">
+        <img class="product-card__img" src="images/products-week/1.png" alt="Wooden chair photo">
+    </div>
+
+    <div class="product-card__inner">
+        <div class="product-card__text">
+            <h3 class="product-card__title">Wooden chair</h3>
+            <div class="product-card__rating" data-rateyo-rating="4"></div>
+            <span class="product-card__price">$29.00</span>
+            <div class="product-card__desc">
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            </div>
+
+            <div class="product-card__buttons">
+                <button class="product-card__button btn-effect">
+                    <svg class="product-card__svg">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                    </svg>
+                </button>
+
+                <button class="product-card__button btn-effect">
+                    <svg class="product-card__svg">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card__box">
+        <button class="product-card__btn product-card__btn--search circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#search"></use>
+            </svg>
+            <span class="sr-only">Search Wooden chair</span>
+        </button>
+
+        <button class="product-card__btn product-card__btn--cart circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#cart"></use>
+            </svg>
+            <span class="sr-only">Add Wooden chair to cart</span>
+        </button>
+
+        <button class="product-card__btn product-card__btn--like circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#heart"></use>
+            </svg>
+            <span class="sr-only">Add Wooden chair to liked products</span>
+        </button>
+    </div>
+</article>
+        </li>
+
+        <li class="catalogue-content__item">
+            <article class="product-card">
+    <div class="product-card__img-wrapper">
+        <img class="product-card__img" src="images/products-week/1.png" alt="Wooden chair photo">
+    </div>
+
+    <div class="product-card__inner">
+        <div class="product-card__text">
+            <h3 class="product-card__title">Wooden chair</h3>
+            <div class="product-card__rating" data-rateyo-rating="4"></div>
+            <span class="product-card__price">$29.00</span>
+            <div class="product-card__desc">
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            </div>
+
+            <div class="product-card__buttons">
+                <button class="product-card__button btn-effect">
+                    <svg class="product-card__svg">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                    </svg>
+                </button>
+
+                <button class="product-card__button btn-effect">
+                    <svg class="product-card__svg">
+                        <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card__box">
+        <button class="product-card__btn product-card__btn--search circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#search"></use>
+            </svg>
+            <span class="sr-only">Search Wooden chair</span>
+        </button>
+
+        <button class="product-card__btn product-card__btn--cart circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#cart"></use>
+            </svg>
+            <span class="sr-only">Add Wooden chair to cart</span>
+        </button>
+
+        <button class="product-card__btn product-card__btn--like circle-btn btn-effect" type="button">
+            <svg class="product-card__svg">
+                <use xlink:href="images/sprite.svg#heart"></use>
+            </svg>
+            <span class="sr-only">Add Wooden chair to liked products</span>
+        </button>
+    </div>
+</article>
+        </li>
+    </ul>
+
+    <div class="catalogue-content__pagination">
+        <ul class="pagination">
+    <li class="pagination__item pagination__item--prev pagination__item--disabled">
+        <a class="pagination__link" href="#">
+            <span class="sr-only">Move to previous page</span>
+            Prev
+        </a>
+    </li>
+
+    <li class="pagination__item pagination__item--active">
+        <a class="pagination__link" href="#">
+            <span class="sr-only">Move to page number 1</span>
+            1
+        </a>
+    </li>
+
+    <li class="pagination__item">
+        <a class="pagination__link" href="#">
+            <span class="sr-only">Move to page number 2</span>
+            2
+        </a>
+    </li>
+
+    <li class="pagination__item">
+        <a class="pagination__link" href="#">
+            <span class="sr-only">Move to page number 3</span>
+            3
+        </a>
+    </li>
+
+    <li class="pagination__item pagination__item--next">
+        <a class="pagination__link" href="#">
+            <span class="sr-only">Move to next page</span>
+            Next
+        </a>
+    </li>
+</ul>
+
+    </div>
 </div>
     </div>
+  </div>
+</section>
+    <section class="partners-slider">
+  <div class="container">
+    <ul class="partners-slider__list">
+      <li class="partners-slider__item">
+        <div class="partners-slider__wrapper">
+          <img class="partners-slider__logo" src="images/partners-slider/1.png" alt="Partner logo">
+        </div>
+      </li>
+
+      <li class="partners-slider__item">
+        <div class="partners-slider__wrapper">
+          <img class="partners-slider__logo" src="images/partners-slider/2.png" alt="Partner logo">
+        </div>
+      </li>
+
+      <li class="partners-slider__item">
+        <div class="partners-slider__wrapper">
+          <img class="partners-slider__logo" src="images/partners-slider/3.png" alt="Partner logo">
+        </div>
+      </li>
+
+      <li class="partners-slider__item">
+        <div class="partners-slider__wrapper">
+          <img class="partners-slider__logo" src="images/partners-slider/4.png" alt="Partner logo">
+        </div>
+      </li>
+
+      <li class="partners-slider__item">
+        <div class="partners-slider__wrapper">
+          <img class="partners-slider__logo" src="images/partners-slider/5.png" alt="Partner logo">
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
   </main>

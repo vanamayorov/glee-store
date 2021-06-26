@@ -1,4 +1,6 @@
-@@include('parts/components/_head.html')
+@@include('parts/components/_head.html', {
+  "title": "Product list 1"
+})
 
 <body>
 
@@ -9,6 +11,7 @@
       "row-name": "Product list 1"
     }) 
     @@include('parts/catalogue/_catalogue.html')
+    @@include('parts/components/_partners-slider.html')
   </main>
 
   @@include('parts/components/_footer.html') 
