@@ -20,111 +20,35 @@
 
       <ul class="team__cards">
         <li class="team__card">
-          <article class="team-card">
-            <img class="team-card__img" src="images/team/1.jpg" alt="Person img">
-
-            <div class="team-card__info">
-              <div class="team-card__personal">
-                <h3 class="team-card__title">Eliza Elliot</h3>
-                <span class="team-card__position">Commodo tempor</span>
-              </div>
-
-              <div class="team-card__buttons">
-                <button class="circle-btn team-card__btn">
-                    <svg class="team-card__svg">
-                        <use xlink:href="images/sprite.svg#instagram"></use>
-                    </svg>
-                </button>
-
-                <button class="circle-btn team-card__btn">
-                    <svg class="team-card__svg">
-                        <use xlink:href="images/sprite.svg#google"></use>
-                    </svg>
-                </button>
-              </div>
-            </div>
-          </article>
+          @@include("../cards/_team-card.html", {
+            "title": "Eliza Elliot",
+            "position": "Commodo tempor",
+            "path": "images/team/1.jpg"
+          })
         </li>
 
         <li class="team__card">
-          <article class="team-card">
-            <img class="team-card__img" src="images/team/2.jpg" alt="Person img">
-
-            <div class="team-card__info">
-              <div class="team-card__personal">
-                <h3 class="team-card__title">Roscoe A.</h3>
-                <span class="team-card__position">Commodo tempor</span>
-              </div>
-
-              <div class="team-card__buttons">
-                <button class="circle-btn team-card__btn">
-                    <svg class="team-card__svg">
-                        <use xlink:href="images/sprite.svg#instagram"></use>
-                    </svg>
-                </button>
-
-                <button class="circle-btn team-card__btn">
-                    <svg class="team-card__svg">
-                        <use xlink:href="images/sprite.svg#google"></use>
-                    </svg>
-                </button>
-              </div>
-            </div>
-          </article>
+          @@include("../cards/_team-card.html", {
+            "title": "Roscoe A.",
+            "position": "Commodo tempor",
+            "path": "images/team/2.jpg"
+          })
         </li>
 
         <li class="team__card">
-          <article class="team-card">
-            <img class="team-card__img" src="images/team/3.jpg" alt="Person img">
-
-            <div class="team-card__info">
-              <div class="team-card__personal">
-                <h3 class="team-card__title">Ruby M.</h3>
-                <span class="team-card__position">Commodo tempor</span>
-              </div>
-
-              <div class="team-card__buttons">
-                <button class="circle-btn team-card__btn">
-                    <svg class="team-card__svg">
-                        <use xlink:href="images/sprite.svg#instagram"></use>
-                    </svg>
-                </button>
-
-                <button class="circle-btn team-card__btn">
-                    <svg class="team-card__svg">
-                        <use xlink:href="images/sprite.svg#google"></use>
-                    </svg>
-                </button>
-              </div>
-            </div>
-          </article>
+          @@include("../cards/_team-card.html", {
+            "title": "Ruby M.",
+            "position": "Commodo tempor",
+            "path": "images/team/3.jpg"
+          })
         </li>
 
         <li class="team__card">
-          <article class="team-card">
-            <img class="team-card__img" src="images/team/4.jpg" alt="Person img">
-
-            <div class="team-card__info">
-              <div class="team-card__personal">
-                <h3 class="team-card__title">Marie F. Bloss</h3>
-                <span class="team-card__position">Commodo tempor</span>
-              </div>
-
-              <div class="team-card__buttons">
-                <button class="circle-btn team-card__btn">
-                    <svg class="team-card__svg">
-                        <use xlink:href="images/sprite.svg#instagram"></use>
-                    </svg>
-                </button>
-
-                <button class="circle-btn team-card__btn">
-                    <svg class="team-card__svg">
-                        <use xlink:href="images/sprite.svg#google"></use>
-                    </svg>
-                </button>
-              </div>
-            </div>
-          </article>
+          @@include("../cards/_team-card.html", {
+            "title": "Marie F. Bloss",
+            "position": "Commodo tempor",
+            "path": "images/team/4.jpg"
+          })
         </li>
       </ul>
     </div>

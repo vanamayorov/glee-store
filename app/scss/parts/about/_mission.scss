@@ -1,8 +1,17 @@
 .mission {
     padding: 120px 0;
 
+    @include media-w($md) {
+        padding: 80px 0;
+    }
+
     &__inner {
         display: flex;
+
+        @include media-w($md) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__img {
@@ -13,6 +22,16 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+
+        @include media-w($md) {
+            align-self: unset;
+            height: 500px;
+            margin-right: 0;
+        }
+
+        @include media-w($xs) {
+            height: 250px;
+        }
     }
 
     &__content {
@@ -21,6 +40,14 @@
         font-family: 'Rubik', sans-serif;
         line-height: 1.9;
         color: $blue70;
+
+        @include media-w($md) {
+            padding-left: 0;
+        }
+
+        @include media-w($sm) {
+            padding-bottom: 0;
+        }
     }
 
     &__top {
@@ -51,12 +78,20 @@
     &__title {
         margin-bottom: 20px;
         color: $blue70;
+
+        @include media-w($md) {
+            line-height: 1.4;
+        }
     }
 
     &__text {
         margin-bottom: 55px;
 
         @include l-clamp(10);
+
+        @include media-w($md) {
+            margin-bottom: 30px;
+        }
     }
 
     &__list {
@@ -67,6 +102,10 @@
         padding: 30px 0 0;
         line-height: 1.2;
         border-top: 1px solid $white70;
+
+        @include media-w($sm) {
+            flex-direction: column;
+        }
     }
 
     &__statistic {
@@ -80,7 +119,13 @@
 
         &:not(:last-child) {
             border-right: 1px solid $white70;
+
+            @include media-w($sm) {
+                margin-bottom: 35px;
+                border-right: 0;
+            }
         }
+
     }
 
     &__wrap {
