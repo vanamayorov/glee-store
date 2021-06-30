@@ -1,0 +1,13 @@
+.blog-content {
+    margin-right: 70px;
+
+    &__articles {
+        margin-bottom: 60px;
+    }
+
+    &__article {
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+    }
+}

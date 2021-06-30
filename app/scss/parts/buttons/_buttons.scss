@@ -109,6 +109,25 @@
         }
     }
 
+    &--blue {
+        color: $blue40;
+        background-color: transparent;
+        border-color: $blue40;
+
+        svg {
+            fill: $blue40;
+        }
+
+        &:hover {
+            color: #fff;
+            background-color: $blue40;
+
+            svg {
+                fill: #fff;
+            }
+        }
+    }
+
     &--round {
         min-width: 170px;
         padding: 10px 50px 10px 15px;

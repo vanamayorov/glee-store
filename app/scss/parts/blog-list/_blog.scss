@@ -1,0 +1,16 @@
+.blog {
+    padding: 125px 0;
+
+    &__container {
+        padding: 0;
+    }
+
+    &__inner {
+        display: flex;
+    }
+
+    &__filters {
+        width: 100%;
+        max-width: 270px;
+    }
+}

@@ -1,0 +1,18 @@
+@@include('parts/components/_head.html', {
+  "title": "Blog"
+})
+
+<body>
+
+@@include('parts/components/_header.html')
+
+  <main class="main">
+    @@include('parts/components/_top-row.html', {
+      "row-name": "Blog"
+    }) 
+    @@include('parts/blog-list/_blog-list.html')
+    @@include('parts/components/_partners-slider.html')
+  </main>
+
+  @@include('parts/components/_footer.html') 
+  @@include('parts/components/_scripts.html')
