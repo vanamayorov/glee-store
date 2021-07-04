@@ -9,6 +9,15 @@
         max-height: 500px;
         object-fit: cover;
         margin-bottom: 25px;
+
+        @include media-w($lg) {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        @include media-w($md) {
+            margin-bottom: 15px;
+        }
     }
 
     &__img {
@@ -29,6 +38,11 @@
         text-transform: uppercase;
         background-color: $blue40;
         transform: translateY(1px);
+
+        @include media-w($md) {
+            width: 250px;
+            padding: 15px 15px 15px 15px;
+        }
     }
 
     &__link {
@@ -65,12 +79,21 @@
         color: $black70;
 
         @include l-clamp(3);
+
+        @include media-w($md) {
+            margin-bottom: 5px;
+            font-size: 26px;
+        }
     }
 
     &__text {
         margin-bottom: 30px;
 
         @include l-clamp(10);
+
+        @include media-w($md) {
+            margin-bottom: 10px;
+        }
     }
 
     &__btn {

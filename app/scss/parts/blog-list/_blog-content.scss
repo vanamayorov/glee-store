@@ -1,6 +1,11 @@
 .blog-content {
     margin-right: 70px;
 
+    @include media-w($lg) {
+        max-width: 670px;
+        margin: 0 auto;
+    }
+
     &__articles {
         margin-bottom: 60px;
     }

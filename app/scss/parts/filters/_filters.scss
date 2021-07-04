@@ -25,6 +25,24 @@
     &:not(:last-child) {
       margin-bottom: 70px;
     }
+
+    &--sm {
+      &:not(:last-child) {
+        margin-bottom: 50px;
+
+        @include media-w($lg) {
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+    &--category {
+      margin-bottom: 20px !important;
+
+      @include media-w($lg) {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__checkbox {
@@ -46,11 +64,11 @@
     overflow: hidden;
     clip: rect(0 0 0 0);
 
-    &:checked + .filter__checkbox {
+    &:checked+.filter__checkbox {
       background-color: rgba(163, 187, 200, 0.2);
     }
 
-    &:hover + .filter__checkbox {
+    &:hover+.filter__checkbox {
       background-color: $blue30;
     }
   }
@@ -260,6 +278,90 @@
       .jq-selectbox__select {
         width: 85px;
       }
+    }
+  }
+}
+
+.filter-search {
+  &__label {
+    display: flex;
+  }
+
+  &__input {
+    width: 220px;
+    border: 2px solid $grey55;
+    border-right: 0;
+    border-radius: 5px;
+    outline-color: transparent;
+    box-shadow: 0;
+    opacity: 0.4;
+    transition: background-color 0.3s, box-shadow 0.3s, border-color 0.3s;
+
+    @include media-w($lg) {
+      width: 100%;
+    }
+
+    &:focus {
+      box-shadow: 0 0 10px $grey90;
+    }
+
+    &:hover {
+      background-color: $grey50;
+    }
+
+    &:active {
+      border-color: $grey60;
+      box-shadow: 0;
+    }
+
+    &:focus-visible {
+      outline: transparent;
+    }
+  }
+
+  &__svg {
+    max-width: 18px;
+    max-height: 18px;
+    vertical-align: middle;
+    transition: fill 0.3s;
+
+    path {
+      fill: rgb(9, 64, 116);
+    }
+  }
+
+  &__submit {
+    width: 44px;
+    height: 44px;
+    background-color: $white80;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    transform: scale(1);
+
+    &:focus {
+      box-shadow: 0 0 10px $grey90;
+    }
+
+    &:hover {
+      background-color: $blue40;
+
+      svg {
+        fill: #fff;
+      }
+    }
+
+    &:active {
+      box-shadow: 0;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.filter-posts {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 25px;
     }
   }
 }

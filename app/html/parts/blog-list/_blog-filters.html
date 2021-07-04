@@ -1,12 +1,23 @@
 <ul class="blog__filters filter">
-  <li class="filter__item filter-category">
+  <li class="filter__item filter__item--sm filter-search">
+    <label class="filter-search__label">
+      <input class="filter-search__input" name="item" type="text">
+      <button class="filter-search__submit" type="submit">
+        <svg class="filter-search__svg">
+          <use xlink:href="images/sprite.svg#filter-search"></use>
+        </svg>  
+      </button>
+    </label>
+  </li>
+
+  <li class="filter__item filter__item--category filter-category">
     <h3 class="filter__title">category</h3>
     <form class="filter-category__form">
       <ul class="filter-category__list">
         <li class="filter-category__item">
           <label class="filter__label">
             <span class="sr-only">Choose chair category</span>
-            <input class="filter__input" type="checkbox" name="category">
+            <input class="filter__input" type="checkbox" name="category" checked>
             <div class="filter__checkbox">
                 <span class="filter-category__subtitle">Chair</span>
                 <svg class="filter-category__svg">
@@ -71,121 +82,44 @@
     </form>
   </li>
 
-  <li class="filter__item filter-price">
-    <h3 class="filter__title">price</h3>
-    <span class="sr-only">Choose price range</span>
-    <form class="filter-price__form">
-      <input class="filter-price__input" type="text" data-min="0" data-max="1000" data-from="100" data-to="500" name="price">
+  <li class="filter__item filter__item--sm filter-posts">
+    <h3 class="filter__title">recent posts</h3>
 
-      <div class="filter-price__box">
-        <span class="filter-price__from"></span>
-        <span class="filter-price__to"></span>
-      </div>
-    </form>
-  </li>
-
-  <li class="filter__item filter-brand">
-    <h3 class="filter__title">brand</h3>
-    <form class="filter-brand__form">
-      <ul class="filter-brand__list">
-        <li class="filter-brand__item">
-          <label class="filter__label">
-            <span class="sr-only">Choose rfl brand</span>
-            <input class="filter__input" type="checkbox" name="brand">
-            <div class="filter__checkbox">
-                <span class="filter-brand__subtitle">RFL</span>
-                <span class="filter-brand__qty">(10)</span>
-            </div>
-          </label>
-        </li>
-
-        <li class="filter-brand__item">
-          <label class="filter__label">
-            <span class="sr-only">Choose brothers brand</span>
-            <input class="filter__input" type="checkbox" name="brand">
-            <div class="filter__checkbox">
-                <span class="filter-brand__subtitle">Brothers</span>
-                <span class="filter-brand__qty">(21)</span>
-            </div>
-          </label>
-        </li>
-
-        <li class="filter-brand__item">
-          <label class="filter__label">
-            <span class="sr-only">Choose regal brand</span>
-            <input class="filter__input" type="checkbox" name="brand">
-            <div class="filter__checkbox">
-                <span class="filter-brand__subtitle">Regal</span>
-                <span class="filter-brand__qty">(3)</span>
-            </div>
-          </label>
-        </li>
-
-        <li class="filter-brand__item">
-          <label class="filter__label">
-            <span class="sr-only">Choose nadia brand</span>
-            <input class="filter__input" type="checkbox" name="brand">
-            <div class="filter__checkbox">
-                <span class="filter-brand__subtitle">Nadia</span>
-                <span class="filter-brand__qty">(14)</span>
-            </div>
-          </label>
-        </li>
-
-        <li class="filter-brand__item">
-          <label class="filter__label">
-            <span class="sr-only">Choose otobi brand</span>
-            <input class="filter__input" type="checkbox" name="brand">
-            <div class="filter__checkbox">
-                <span class="filter-brand__subtitle">Otobi</span>
-                <span class="filter-brand__qty">(6)</span>
-            </div>
-          </label>
-        </li>
-      </ul>
-    </form>
-  </li>
-
-  <li class="filter__item filter-recent">
-    <h3 class="filter__title">recent products</h3>
-    <ul class="filter-recent__list">
-      <li class="filter-recent__item">
-        <a class="filter-recent__link" href="#">
-          <div class="filter-recent__box">
-            <img class="filter-recent__img" src="images/recent-products/1.png" alt="Product image">
-          </div>
-          <div class="filter-recent__content">
-            <h4 class="filter-recent__subtitle">Pendant lamp</h4>
-            <div class="filter-recent__rating" data-rateyo-rating="4"></div>
-            <span class="filter-recent__price">23$</span>
-          </div>
-        </a>
+    <ul class="filter-posts__list">
+      <li class="filter-posts__item">
+        @@include('../cards/_post-card.html', {
+          "path": "images/posts-card/1.jpg",
+          "title": "Corem ipsum dolor tetur adipisicing elit",
+          "date": "28 january, 2020",
+          "date-alt": "2020-01-28"
+        })
       </li>
 
-      <li class="filter-recent__item">
-        <a class="filter-recent__link" href="#">
-          <div class="filter-recent__box">
-            <img class="filter-recent__img" src="images/recent-products/2.png" alt="Product image">
-          </div>
-          <div class="filter-recent__content">
-            <h4 class="filter-recent__subtitle">Pendant lamp</h4>
-            <div class="filter-recent__rating" data-rateyo-rating="4"></div>
-            <span class="filter-recent__price">23$</span>
-          </div>
-        </a>
+      <li class="filter-posts__item">
+        @@include('../cards/_post-card.html', {
+          "path": "images/posts-card/2.jpg",
+          "title": "Fdipisicing elit, sed do eiusmod tempor",
+          "date": "28 january, 2020",
+          "date-alt": "2020-01-28"
+        })
       </li>
 
-      <li class="filter-recent__item">
-        <a class="filter-recent__link" href="#">
-          <div class="filter-recent__box">
-            <img class="filter-recent__img" src="images/recent-products/3.png" alt="Product image">
-          </div>
-          <div class="filter-recent__content">
-            <h4 class="filter-recent__subtitle">Pendant lamp</h4>
-            <div class="filter-recent__rating" data-rateyo-rating="4"></div>
-            <span class="filter-recent__price">23$</span>
-          </div>
-        </a>
+      <li class="filter-posts__item">
+        @@include('../cards/_post-card.html', {
+          "path": "images/posts-card/3.jpg",
+          "title": "Eonsectetur adipisicing elit, sed do eiusmod ",
+          "date": "28 january, 2020",
+          "date-alt": "2020-01-28"
+        })
+      </li>
+
+      <li class="filter-posts__item">
+        @@include('../cards/_post-card.html', {
+          "path": "images/posts-card/4.jpg",
+          "title": "gnim ad minim veniam, quis nostrud ",
+          "date": "28 january, 2020",
+          "date-alt": "2020-01-28"
+        })
       </li>
     </ul>
   </li>

@@ -1,16 +1,29 @@
 .blog {
     padding: 125px 0;
 
-    &__container {
-        padding: 0;
+    @include media-w($lg) {
+        padding: 75px 0;
+    }
+
+    @include media-w($sm) {
+        padding: 30px 0;
     }
 
     &__inner {
         display: flex;
+
+        @include media-w($lg) {
+            flex-direction: column-reverse;
+        }
     }
 
     &__filters {
         width: 100%;
         max-width: 270px;
+
+        @include media-w($lg) {
+            max-width: 760px;
+            margin: 0 auto 25px;
+        }
     }
 }
