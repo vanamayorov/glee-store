@@ -36,131 +36,22 @@
 
 //BLOG-LIST
 @import "parts/blog-list/blog";
-@import "parts/blog-list/_blog-content";
+@import "parts/blog-list/blog-content";
 @import "parts/cards/blog-card";
 @import "parts/cards/post-card";
 
 // BLOG-DETAILS
+@import "parts/blog-details/blog-details";
+@import "parts/cards/blog-post";
+@import "parts/cards/comment-card";
+@import "parts/forms/comment-form";
 
-.blog-details {
-    padding: 120px 0;
+// PRODUCT-DETAILS
+@import "parts/product-details/related-products";
+@import "parts/product-details/product-details";
+@import "parts/product-details/product-tabs";
 
-    &__inner {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-    }
-
-    &__content {
-        margin-right: 70px;
-    }
-}
-
-.blog-head {
-    position: relative;
-    max-width: 830px;
-    max-height: 500px;
-    margin-bottom: 20px;
-
-    &__box {
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        display: flex;
-        align-items: center;
-        width: 275px;
-        padding: 25px 30px 25px 25px;
-        font-family: 'Rubik', sans-serif;
-        font-size: 12px;
-        color: #fff;
-        text-transform: uppercase;
-        background-color: $blue40;
-    }
-
-    &__info {
-        display: inline-block;
-
-        &:not(:last-child) {
-            margin-right: 25px;
-        }
-    }
-
-    &__img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
-
-.blog-post {
-    font-family: 'Rubik', sans-serif;
-
-    &__content {
-        h2 {
-            margin-bottom: 10px;
-            font-size: 36px;
-            font-weight: 400;
-            color: $black70;
-        }
-
-        h3 {
-            margin-bottom: 15px;
-            font-size: 16px;
-            font-weight: 500;
-            color: $blue70;
-        }
-
-        blockquote {
-            padding: 20px 120px 20px 35px;
-            margin: 40px 0;
-            color: $blue70;
-            background-color: $blue20;
-            border-left: 6px solid $blue40;
-        }
-
-        cite {
-            position: relative;
-            display: block;
-            padding-left: 45px;
-            margin-top: 10px;
-            font-style: normal;
-            color: $blue70;
-
-            &::before {
-                position: absolute;
-                top: 50%;
-                left: 0;
-                width: 20px;
-                height: 3px;
-                content: "";
-                background-color: $blue40;
-                transform: translateY(-50%);
-            }
-        }
-
-        img {
-            float: left;
-            max-width: 320px;
-            max-height: 210px;
-            margin-right: 30px;
-            margin-bottom: 40px;
-            object-fit: contain;
-        }
-
-        img ~ h3 {
-            clear: left;
-            font-size: 18px;
-        }
-
-        img + h3 {
-            padding-top: 20px;
-            clear: right;
-        }
-
-        p {
-            &:last-child {
-                margin-bottom: 65px;
-            }
-        }
-    }
-}
+//CONTACT
+@import "parts/contact/contact";
+@import "parts/cards/contact-card";
+@import "parts/forms/contact-form";

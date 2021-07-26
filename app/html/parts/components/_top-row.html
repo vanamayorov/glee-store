@@ -1,8 +1,14 @@
 <section class="top-row">
   <div class="top-row__inner">
     <h1 class="top-row__title">@@row-name</h1>
-    @@include('_breadcrumbs.html', {
-        "curr-page": "Product list 1"
-    })
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link link-effect" href="#">Home</a>
+      </li>
+    
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link link-effect" href="#">@@row-name</a>
+      </li>
+    </ul>
   </div>
 </section>

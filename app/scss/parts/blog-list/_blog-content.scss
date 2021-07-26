@@ -15,4 +15,28 @@
             margin-bottom: 50px;
         }
     }
+
+    &__btn {
+        position: fixed;
+        right: 0;
+        bottom: 50px;
+        z-index: 5;
+        display: none;
+        width: 60px;
+        height: 60px;
+        padding: 0;
+        background-color: #a3bbc8;
+        border: none;
+
+        @include media-w($lg) {
+            display: block;
+        }
+    }
+
+    &__svg {
+        max-width: 25px;
+        max-height: 25px;
+        vertical-align: middle;
+        fill: #fff;
+    }
 }

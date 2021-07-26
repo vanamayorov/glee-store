@@ -1,0 +1,116 @@
+.contact-form {
+    width: 620px;
+    margin-right: 50px;
+
+    @include media-w($lg) {
+        margin-right: 0;
+    }
+
+    @include media-w($sm) {
+        width: 80%;
+    }
+
+    &__box {
+        display: flex;
+
+        @include media-w($sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__group {
+        position: relative;
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-right: 20px;
+
+            @include media-w($sm) {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+
+        &--textarea {
+            margin-top: 25px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__input {
+        width: 300px;
+        padding: 15px 60px 15px 20px;
+        font-weight: 500;
+        color: #565872;
+        background-color: $white50;
+        border: 1px solid transparent;
+        outline-color: transparent;
+        box-shadow: 0;
+        transition: box-shadow 0.3s, border-color 0.3s;
+
+        @include media-w($sm) {
+            width: 100%;
+        }
+
+        &::placeholder {
+            text-transform: uppercase;
+        }
+
+        &:focus {
+            box-shadow: 0 0 10px $grey90;
+        }
+
+        &:hover {
+            border-color: $grey60;
+        }
+    }
+
+    &__svg {
+        position: absolute;
+        top: 50%;
+        right: 25px;
+        fill: $blue60;
+        transform: translateY(-50%);
+
+        &--msg {
+            top: 25px;
+        }
+    }
+
+    &__textarea {
+        width: 100%;
+        min-height: 175px;
+        padding: 10px 30px 15px 20px;
+        font-weight: 500;
+        resize: none;
+        background-color: $white50;
+        border: 1px solid transparent;
+        outline-color: transparent;
+        box-shadow: 0;
+        transition: box-shadow 0.3s, border-color 0.3s;
+
+        &::placeholder {
+            text-transform: uppercase;
+        }
+
+        &:focus {
+            box-shadow: 0 0 10px $grey90;
+        }
+
+        &:hover {
+            border-color: $grey60;
+        }
+    }
+
+    &__btn {
+        display: inline-block;
+        min-width: 200px;
+        padding: 10px;
+        font-weight: 500;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: $blue40;
+        border: none;
+        border-radius: 5px;
+    }
+}

@@ -1,51 +1,57 @@
 <div class="blog-content">
-  <ul class="blog-content__articles">
-    <li class="blog-content__article">
-      @@include('../cards/_blog-card.html', {
-          "path": "images/blog-list/1.jpg",
-          "time": "28 january, 2020",
-          "time-alt": "2020-01-28",
-          "title": "Fonsectetur adipisicing eiusmod",
-          "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
-          "author": "admin"
-      })
-    </li>
+    <button class="blog-content__btn">
+        <svg class="blog-content__svg">
+            <use xlink:href="images/sprite.svg#filter"></use>
+        </svg>
+    </button>
 
-    <li class="blog-content__article">
-      @@include('../cards/_blog-card.html', {
-          "path": "images/blog-list/2.jpg",
-          "time": "28 january, 2020",
-          "time-alt": "2020-01-28",
-          "title": "Fonsectetur adipisicing elit",
-          "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
-          "author": "admin"
-      })
-    </li>
+    <ul class="blog-content__articles">
+        <li class="blog-content__article">
+            @@include('../cards/_blog-card.html', {
+            "path": "images/blog-list/1.jpg",
+            "time": "28 january, 2020",
+            "time-alt": "2020-01-28",
+            "title": "Fonsectetur adipisicing eiusmod",
+            "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
+            "author": "admin"
+            })
+        </li>
 
-    <li class="blog-content__article">
-      @@include('../cards/_blog-card.html', {
-          "path": "images/blog-list/3.jpg",
-          "time": "28 january, 2020",
-          "time-alt": "2020-01-28",
-          "title": "Fsectetur adipisicing tempor incididunt",
-          "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
-          "author": "admin"
-      })
-    </li>
+        <li class="blog-content__article">
+            @@include('../cards/_blog-card.html', {
+            "path": "images/blog-list/2.jpg",
+            "time": "28 january, 2020",
+            "time-alt": "2020-01-28",
+            "title": "Fonsectetur adipisicing elit",
+            "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
+            "author": "admin"
+            })
+        </li>
 
-    <li class="blog-content__article"> 
-      @@include('../cards/_blog-card.html', {
-          "path": "images/blog-list/4.jpg",
-          "time": "28 january, 2020",
-          "time-alt": "2020-01-28",
-          "title": "vonsectetur adipisicing elit",
-          "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
-          "author": "admin"
-      })
-    </li>
-  </ul>
-  
-  <div class="blog-content__pagination">
-  @@include("../components/_pagination.html")
-  </div>
+        <li class="blog-content__article">
+            @@include('../cards/_blog-card.html', {
+            "path": "images/blog-list/3.jpg",
+            "time": "28 january, 2020",
+            "time-alt": "2020-01-28",
+            "title": "Fsectetur adipisicing tempor incididunt",
+            "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
+            "author": "admin"
+            })
+        </li>
+
+        <li class="blog-content__article">
+            @@include('../cards/_blog-card.html', {
+            "path": "images/blog-list/4.jpg",
+            "time": "28 january, 2020",
+            "time-alt": "2020-01-28",
+            "title": "vonsectetur adipisicing elit",
+            "text": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
+            "author": "admin"
+            })
+        </li>
+    </ul>
+
+    <div class="blog-content__pagination">
+        @@include("../components/_pagination.html")
+    </div>
 </div>

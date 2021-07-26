@@ -1,6 +1,22 @@
 .filter {
   color: $blue70;
 
+  @include media-w($lg) {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    left: 0;
+    max-width: 100%;
+    padding: 25px;
+    background-color: #fff;
+    transition: transform 0.3s;
+    transform: translateY(-200%);
+  }
+
+  &--active {
+    transform: translateY(0);
+  }
+
   &__title {
     position: relative;
     display: inline-block;
@@ -359,9 +375,13 @@
 }
 
 .filter-posts {
-  &__item {
-    &:not(:last-child) {
-      margin-bottom: 25px;
+    @include media-w($lg) {
+        display: none;
     }
-  }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
 }

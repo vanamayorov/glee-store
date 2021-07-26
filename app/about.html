@@ -106,14 +106,14 @@
   <div class="top-row__inner">
     <h1 class="top-row__title">About us</h1>
     <ul class="breadcrumbs">
-  <li class="breadcrumbs__item">
-    <a class="breadcrumbs__link link-effect" href="#">Home</a>
-  </li>
-
-  <li class="breadcrumbs__item">
-    <a class="breadcrumbs__link link-effect" href="#">Product list 1</a>
-  </li>
-</ul>
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link link-effect" href="#">Home</a>
+      </li>
+    
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link link-effect" href="#">About us</a>
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -611,6 +611,67 @@
   </div>
 </footer> 
   <script src="js/main.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async></script>
+<script>
+  let map;
+
+  function initMap() {
+    map = new google.maps.Map(document.querySelector(".contact__map"), {
+      center: {
+        lat: 29.803981562092755,
+        lng: -95.3592925661109
+      },
+      zoom: 8,
+      styles: [{
+        "featureType": "landscape.natural",
+        "elementType": "geometry.fill",
+        "stylers": [{
+          "visibility": "on"
+        }, {
+          "color": "#e0efef"
+        }]
+      }, {
+        "featureType": "poi",
+        "elementType": "geometry.fill",
+        "stylers": [{
+          "visibility": "on"
+        }, {
+          "hue": "#1900ff"
+        }, {
+          "color": "#c0e8e8"
+        }]
+      }, {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [{
+          "lightness": 100
+        }, {
+          "visibility": "simplified"
+        }]
+      }, {
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": [{
+          "visibility": "off"
+        }]
+      }, {
+        "featureType": "transit.line",
+        "elementType": "geometry",
+        "stylers": [{
+          "visibility": "on"
+        }, {
+          "lightness": 700
+        }]
+      }, {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [{
+          "color": "#7dcdcd"
+        }]
+      }]
+    });
+  }
+</script>
 </body>
 
 </html>

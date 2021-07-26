@@ -1,0 +1,25 @@
+@@include('parts/components/_head.html', {
+"title": "Product details"
+})
+
+<body>
+
+@@include('parts/components/_header.html')
+
+<main class="main">
+    @@include('parts/components/_top-row.html', {
+    "row-name": "Product details"
+    })
+
+    @@include('parts/product-details/_product-details.html')
+    @@include('parts/product-details/_related-products.html')
+
+    @@include('parts/components/_articles.html', {
+    "additional": ""
+    })
+    @@include('parts/components/_partners-slider.html')
+</main>
+
+@@include('parts/components/_footer.html')
+
+@@include('parts/components/_scripts.html')

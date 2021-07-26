@@ -1,0 +1,90 @@
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 380px;
+    padding: 60px 20px;
+    cursor: pointer;
+    background-color: $white60;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+
+    @include media-w($md) {
+        max-width: 700px;
+        min-height: unset;
+        max-height: 300px;
+        padding: 20px;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 55px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 6px 57px 0 rgba(37, 37, 37, 0.05);
+        transition: background-color 0.3s;
+
+        @include media-w($md) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        font-family: "DMSans", sans-serif;
+        font-size: 20px;
+        color: $black90;
+    }
+
+    &__box {
+        display: flex;
+        font-family: 'Rubik', sans-serif;
+        color: #565872;
+    }
+
+    &__address {
+        max-width: 170px;
+        color: #565872;
+        text-align: center;
+    }
+
+    &__link {
+        outline-color: transparent;
+        box-shadow: 0 0;
+        transition: box-shadow 0.3s, color 0.3s;
+
+        &:focus {
+            box-shadow: 0 0 10px $grey90;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:active {
+            color: $grey80;
+        }
+    }
+
+    &__svg {
+        fill: $blue40;
+        transition: fill 0.3s;
+    }
+
+    &:hover {
+        border-color: $blue40;
+
+        .contact-card__icon {
+            background-color: $blue40;
+        }
+
+        .contact-card__svg {
+            fill: #fff;
+        }
+    }
+}

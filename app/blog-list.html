@@ -106,14 +106,14 @@
   <div class="top-row__inner">
     <h1 class="top-row__title">Blog</h1>
     <ul class="breadcrumbs">
-  <li class="breadcrumbs__item">
-    <a class="breadcrumbs__link link-effect" href="#">Home</a>
-  </li>
-
-  <li class="breadcrumbs__item">
-    <a class="breadcrumbs__link link-effect" href="#">Product list 1</a>
-  </li>
-</ul>
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link link-effect" href="#">Home</a>
+      </li>
+    
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link link-effect" href="#">Blog</a>
+      </li>
+    </ul>
   </div>
 </section> 
     <section class="blog">
@@ -121,9 +121,15 @@
     <div class="blog__inner">
       <h2 class="sr-only">Blog content</h2>
       <div class="blog-content">
-  <ul class="blog-content__articles">
-    <li class="blog-content__article">
-      <article class="blog-card">
+    <button class="blog-content__btn">
+        <svg class="blog-content__svg">
+            <use xlink:href="images/sprite.svg#filter"></use>
+        </svg>
+    </button>
+
+    <ul class="blog-content__articles">
+        <li class="blog-content__article">
+            <article class="blog-card">
   <div class="blog-card__box">
     <img class="blog-card__img" src="images/blog-list/1.jpg" alt="Fonsectetur adipisicing eiusmod img">
 
@@ -157,10 +163,10 @@
     </a>
   </div>
 </article>
-    </li>
+        </li>
 
-    <li class="blog-content__article">
-      <article class="blog-card">
+        <li class="blog-content__article">
+            <article class="blog-card">
   <div class="blog-card__box">
     <img class="blog-card__img" src="images/blog-list/2.jpg" alt="Fonsectetur adipisicing elit img">
 
@@ -194,10 +200,10 @@
     </a>
   </div>
 </article>
-    </li>
+        </li>
 
-    <li class="blog-content__article">
-      <article class="blog-card">
+        <li class="blog-content__article">
+            <article class="blog-card">
   <div class="blog-card__box">
     <img class="blog-card__img" src="images/blog-list/3.jpg" alt="Fsectetur adipisicing tempor incididunt img">
 
@@ -231,10 +237,10 @@
     </a>
   </div>
 </article>
-    </li>
+        </li>
 
-    <li class="blog-content__article"> 
-      <article class="blog-card">
+        <li class="blog-content__article">
+            <article class="blog-card">
   <div class="blog-card__box">
     <img class="blog-card__img" src="images/blog-list/4.jpg" alt="vonsectetur adipisicing elit img">
 
@@ -268,11 +274,11 @@
     </a>
   </div>
 </article>
-    </li>
-  </ul>
-  
-  <div class="blog-content__pagination">
-  <ul class="pagination">
+        </li>
+    </ul>
+
+    <div class="blog-content__pagination">
+        <ul class="pagination">
     <li class="pagination__item pagination__item--prev pagination__item--disabled">
         <a class="pagination__link" href="#">
             <span class="sr-only">Move to previous page</span>
@@ -309,7 +315,7 @@
     </li>
 </ul>
 
-  </div>
+    </div>
 </div>
       <ul class="blog__filters filter">
   <li class="filter__item filter__item--sm filter-search">
@@ -653,6 +659,67 @@
   </div>
 </footer> 
   <script src="js/main.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async></script>
+<script>
+  let map;
+
+  function initMap() {
+    map = new google.maps.Map(document.querySelector(".contact__map"), {
+      center: {
+        lat: 29.803981562092755,
+        lng: -95.3592925661109
+      },
+      zoom: 8,
+      styles: [{
+        "featureType": "landscape.natural",
+        "elementType": "geometry.fill",
+        "stylers": [{
+          "visibility": "on"
+        }, {
+          "color": "#e0efef"
+        }]
+      }, {
+        "featureType": "poi",
+        "elementType": "geometry.fill",
+        "stylers": [{
+          "visibility": "on"
+        }, {
+          "hue": "#1900ff"
+        }, {
+          "color": "#c0e8e8"
+        }]
+      }, {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [{
+          "lightness": 100
+        }, {
+          "visibility": "simplified"
+        }]
+      }, {
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": [{
+          "visibility": "off"
+        }]
+      }, {
+        "featureType": "transit.line",
+        "elementType": "geometry",
+        "stylers": [{
+          "visibility": "on"
+        }, {
+          "lightness": 700
+        }]
+      }, {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [{
+          "color": "#7dcdcd"
+        }]
+      }]
+    });
+  }
+</script>
 </body>
 
 </html>
