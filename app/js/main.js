@@ -51,8 +51,8 @@ $(function () {
   $(".top-slider__inner").slick({
     dots: true,
     arrows: false,
-    // autoplay: true,
-    // autoplaySpeed: 4000,
+    autoplay: true,
+    autoplaySpeed: 4000,
   });
 
   $('.related-products__slider').slick({
@@ -88,6 +88,9 @@ $(function () {
     dots: false,
     arrows: false,
     slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    infinite: true,
     responsive: [
       {
         breakpoint: 992,
@@ -172,6 +175,26 @@ $(function () {
       .slideToggle();
   });
 
+  var containerEl1 = $('.products-week');
+  var containerEl2 = $('.new-design');
+
+  var mixer1 = mixitup(containerEl1, {
+    animation: {
+      effects: 'fade translateZ(-30px)'
+    },
+    controls: {
+      scope: 'local'
+    }
+  });
+  var mixer2 = mixitup(containerEl2, {
+    animation: {
+      effects: 'fade translateZ(-30px)'
+    },
+    controls: {
+      scope: 'local'
+    }
+  });
+
   $(".filter-recent__rating").rateYo({
     starWidth: "10px",
     readOnly: true,
@@ -194,20 +217,5 @@ $(function () {
     spacing: "12px",
     normalFill: "#d6d6d6",
     ratedFill: "#ffcc00",
-  })
-
-  var containerEl1 = $('[data-ref="mix-1"]');
-  var containerEl2 = $('[data-ref="mix-2"]');
-
-  var mixer1 = mixitup(containerEl1, {
-    controls: {
-      scope: "local",
-    },
   });
-  var mixer2 = mixitup(containerEl2, {
-    controls: {
-      scope: "local",
-    },
-  });
-
 });

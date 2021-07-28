@@ -1,0 +1,20 @@
+@@include('parts/components/_head.html', {
+"title": "Log in"
+})
+
+<body>
+
+@@include('parts/components/_header.html')
+
+<main class="main">
+    @@include('parts/components/_top-row.html', {
+    "row-name": "Log in"
+    })
+
+    @@include('parts/login/_login.html')
+
+    @@include('parts/components/_partners-slider.html')
+</main>
+
+@@include('parts/components/_footer.html')
+@@include('parts/components/_scripts.html')

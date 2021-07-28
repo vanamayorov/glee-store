@@ -1,0 +1,45 @@
+.terms {
+  padding: 115px 0;
+  color: $blue70;
+
+  @include media-w($md) {
+    padding: 30px 0;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 24px;
+
+    &--mb {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 55px;
+    counter-reset: section;
+  }
+
+  &__item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__num {
+    padding-right: 13px;
+
+    &::before {
+      content: "0" counters(section, ".") ".";
+      counter-increment: section;
+    }
+  }
+
+  &__row {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+}

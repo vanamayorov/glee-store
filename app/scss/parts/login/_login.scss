@@ -1,0 +1,43 @@
+.login {
+  padding-top: 115px;
+  padding-bottom: 115px;
+  font-size: 14px;
+
+  @include media-w($md) {
+    padding: 30px 15px;
+  }
+
+  &__top {
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $white40;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  &__btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    color: $blue70;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid $blue40;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      color: #fff;
+      background-color: $blue40;
+    }
+  }
+}
